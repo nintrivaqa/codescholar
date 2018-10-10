@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    position: relative;
+}
+
+.timeline {
+    padding: 40px 0px;
+    width: 80%;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 65px;
+    width: 3px;
+    height: calc(100% - 80px);
+    background: #eac435;
+}
+
+.timeline .column {
+    margin: 40px 40px 40px 120px;
+}
+
+.timeline .column .title h2:before {
+    content: "";
+    position: absolute;
+    left: -60px;
+    top: 10px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 3px solid #eac435;
+}
+
+.timeline .column .title h2 {
+    margin-top: 60px;
+    font-size: 28px;
+}
+
+.timeline .column .description p {
+    font-size: 13px;
+    line-height: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-family: serif;
+}
+
+.main {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 80px;
+}
+
+.main h1 {
+    font-size: 80px;
+    line-height: 60px;
+}
+
+.main p {
+    font-size: 13px;
+    line-height: 20px;
+    font-family: serif;
+    text-align: right;
+}
+
+@media(max-width:400px) {
+    .timeline .column {
+        margin: 40px 0px 40px 90px;
+    }
+    .timeline .column .title h2:before {
+        content: "";
+        position: absolute;
+        left: -65px;
+        top: 10px;
+        width: 15px;
+        height: 15px;
+        background: #fff;
+        border: 3px solid #eac435;
+    }
+    .timeline:before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 30px;
+        width: 3px;
+        height: calc(100% - 80px);
+        background: #eac435;
+    }
+}
