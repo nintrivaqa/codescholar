@@ -669,6 +669,38 @@
                         margin: 0;
                         padding: 5%;
                     }
+                    /*############# card #############*/
+
+                    .course-card{
+                        border-radius: 10px;
+                        padding: 15px;
+                        text-align: center;
+                        max-width: 260px;
+                        margin: 30px auto;
+                    }
+                    .course-card img{
+                        background: #fff;
+                        border-radius: 50%;
+                        margin: 50px auto;
+                        height: 100px;
+                        width: 100px;
+                    }
+                    .course-card h5{
+                        font-size: 18px;
+                    }
+                    .course-card p{
+                        font-size: 12px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    
+                    }
+                    .course-card button{
+                        border-radius: 20px;
+                        padding: 6px 25px;
+                        font-size: 12px;
+                    }
+
                     /* ############### @media ################  */
                     
                     @media(min-width:568px) {
