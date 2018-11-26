@@ -10,9 +10,51 @@
     <meta name="viewport" content="width=device-width,initial-scale = 1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="css/w3.css">
     <link rel="stylesheet" href="css/my.css">
     <link rel="stylesheet" href="css/timeline.css">
+   
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            margin-top: 30px;
+            width: 100%;
+            border: none;
+            text-align: left;   
+            outline: none;
+            font-size: 15px;
+            transition: .4s ease;
+        }
+        .accordion h4{
+            margin: 0;
+           
+        }
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+        
+        .glyphicon {
+            margin-right: 15px;
+            top: 3px;
+            color: #eac435;
+}
+
+        .panel p{
+            color: #666;
+            font-size: 17px;
+            margin-left: 34px;
+            text-align: left;
+        }
+       html [type=button], [type=reset], [type=submit] {
+    -webkit-appearance: button-bevel;
+}
+</style>
 </head>
 
 <body>
@@ -50,7 +92,7 @@
                                             <li><a href="other.html">Other Courses</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="mnu" href="FAQ.html">FAQ</a></li>
+                                    <li><a class="mnu" href="#">FAQ</a></li>
                                     <li><a class="mnu" href="contact.html">Contact Us</a></li>
                                     <li><a href="#"><button class="rgtr" type="button"> Register</button></a></li>
                                     <li><a href="#"><button class="login" type="button">Login</button></a></li>
@@ -63,8 +105,8 @@
                 <!--###############################################################################################-->
                 <!--#################slider-->
                 <div class="headerimg">
-                    <h1>Onsite Bootcamp</h1>
-                    <img src="img/codescholar10.jpg">
+                    <h1>F.A.Q</h1>
+                    <img src="img/Faq-header.jpg">
                 </div>
                 <!--#################/////////////slider-->
             </div>
@@ -81,78 +123,42 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="specialities" style="padding: 5%;">
 
-                            <h1> Onsite Coding Bootcamp
+                            <h1>F.A.Q
                             </h1>
-                            <hr>
-                            <p>
-                                The 12 Weeks fulltime program provides intense structured training to make you a professional programmer in the shortest possible time. Designed to cater to the needs of even absolute beginners to programming, we teach the latest on-demand technologies
-                                together with solid foundations in computer science and software engineering to ensure you master the art of programming . The program includes an internship with a technology company to ensure you graduate with real-life
-                                work experience already on your resume.
-                            </p>
-                            <p>
-                                Our curriculum is based on JavaScript Full Stack as this the most in-demand skill the industry needs. We chose JavaScript as it is the the language of the web which powers front end as well as back end development. Right from the fundamentals of JS, we
-                                go on to teach your choice of front end framework - Angular or React and concepts of server side development with Node.js and Express framework.
-                            </p>
-                            <p>
-                                However beyond teaching a particular language or framework, we ensure that our students develop the ability to teach themselves any language or framework they might want to learn, Java, Python, C#, Objective C or just about anything which makes them future
-                                ready. We emphasize on writing great code irrespective of the programming language or technology stack.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="specialities" style="padding: 5%;">
+                            <hr style="margin-bottom:50px">
 
-                            <h1>The Full time Course is structured as below</h1>
-                            <hr>
-                            <div class="timeline">
-                                <div class="column">
-                                    <div class="title">
-                                        <h2>Programming Foundations(3 weeks)</h2>
-                                    </div>
-                                    <div class="description">
-                                        <p> We cover HTML, CSS, Responsive Design, Bootstrap, JavaScript,jQuery and your choice of front end frameworks - Angular or React </p>
-                                    </div>
+
+
+                                <button class="accordion"><h4 type="button" data-toggle="collapse" data-target="#faq0" aria-expanded="false"  ><span class="glyphicon glyphicon-plus-sign"></span>Where will be the classes held for the blended courses?</h4> </button>
+                                <div class="panel">
+                                <p> Contact sessions / classes will be held in our premises in Cochin and Bangalore.</p>
                                 </div>
 
-                                <div class="column">
-                                    <div class="title">
-                                        <h2>Front-End Technologies(3 weeks) </h2>
-                                    </div>
-                                    <div class="description">
-                                        <p>Prepares you for the program and introduce you to the technologies we would be focussing on.</p>
-                                    </div>
+                                <button class="accordion"><h4 type="button" data-toggle="collapse" data-target="#faq0" aria-expanded="false"  ><span class="glyphicon glyphicon-plus-sign"></span>Is it compulsory to attend the contact classes?</h4> </button>
+                                <div class="panel">
+                                <p>No, it is not compulsory to attend contact sessions. If you
+                                        do not attend, you will be provided with recorded lectures of classes.
+                                </p>
                                 </div>
 
-                                <div class="column">
-                                    <div class="title">
-                                        <h2> Back-End Concepts(3 weeks)</h2>
-                                    </div>
-                                    <div class="description">
-                                        <p>Learn Javascript on the server side- Node.js, databases, and backend frameworks such as Express.</p>
-                                    </div>
+                                <button class="accordion"><h4 type="button" data-toggle="collapse" data-target="#faq0" aria-expanded="false"  ><span class="glyphicon glyphicon-plus-sign"></span>How can I get my doubts / queries solved in an online program?</h4> </button>
+                                <div class="panel">
+                                <p> There will be regular interactive sessions with faculty through live webinars to get clarification on subject matter. You will  have a personal mentor assigned to you who will respond to your queries over email.</p>
+                                </div>
+                                
+                                <button class="accordion"><h4 type="button" data-toggle="collapse" data-target="#faq0" aria-expanded="false"  ><span class="glyphicon glyphicon-plus-sign"></span>Will I get access to the course content after program completion?</h4> </button>
+                                <div class="panel">
+                                <p> Yes, you will get access to the course content even after you complete the program for a period of 3 years from date of completion. </p>
                                 </div>
 
-                                <div class="column">
-                                    <div class="title">
-                                        <h2>Internship(3 weeks)</h2>
-                                    </div>
-                                    <div class="description">
-                                        <p> On-the-job training with an unpaid internship which will groom you to write programs the right way. For three weeks, you’ll gain invaluable industry experience in one of our partner companies, that will help you
-                                            kickstart your new career as a full stack developer.The internship can be extended with stipend or translate into a job offer based on your performance. </p>
-                                    </div>
+                                <button class="accordion"><h4 type="button" data-toggle="collapse" data-target="#faq0" aria-expanded="false"  ><span class="glyphicon glyphicon-plus-sign"></span>Is the Blended Boot Camp a self-paced program ?</h4> </button>
+                                <div class="panel">
+                                <p> No. The start and end dates of the Boot Camp are fixed, and all assignments and projects are to be completed by the end dates. However individual deadlines for projects or tasks are recommendations, not requirements. The course is flexible to plan at your own pace but following the recommended timelines will best enable you to keep pace with your peers, and complete the program on time.</p>
                                 </div>
 
-                                <div class="column">
-                                    <div class="title">
-                                        <h2> Career Support Services( For Life) </h2>
-                                    </div>
-                                    <div class="description">
-                                        <p> Our curriculum includes everything you need to master the art of cracking the job interviews. Further, once the coding bootcamp is complete, we continue to support each graduate by personalised mentoring and carer
-                                            support services - for your first job and forever, whenever you need.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+
+
+
                         </div>
                     </div>
                 </div>
@@ -162,7 +168,6 @@
         <!--###############################################################################################-->
         <!--###############################################################################################-->
     </div>
-
 
     <!--################### Footer-->
     <div class="row">
@@ -198,6 +203,34 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">jQuery(function ($) {
+        $(document).ready(function(){
+                $("h4").click(function(){
+                    $(this).children(".glyphicon").toggleClass("glyphicon-plus-sign");
+                    $(this).children(".glyphicon").toggleClass("glyphicon-minus-sign");
+        
+                });
+            });
+        });</script>
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+}
+</script>
+    
 </body>
 
 </html>

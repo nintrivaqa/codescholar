@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/w3.css">
+     <link href="css/flexisel.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/my.css">
+   
 </head>
 
 <body>
@@ -49,8 +51,8 @@
                                             <li><a href="other.html">Other Courses</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="mnu" href="#">FAQ</a></li>
-                                    <li><a class="mnu" href="#">Contact Us</a></li>
+                                    <li><a class="mnu" href="FAQ.html">FAQ</a></li>
+                                    <li><a class="mnu" href="contact.html">Contact Us</a></li>
                                     <li><a href="#"><button class="rgtr" type="button"> Register</button></a></li>
                                     <li><a href="#"><button class="login" type="button">Login</button></a></li>
                                 </ul>
@@ -206,7 +208,7 @@
                                 <h3>Other Courses</h3>
                                 <h3>&nbsp;</h3>
                                 <p>Specialised trainings to upgrade your skills for experienced professonals</p>
-                                <a href="#"><button class="sktlbtn" type="button">Learn More</button></a>
+                                <a href="other.html"><button class="sktlbtn" type="button">Learn More</button></a>
                             </div>
                         </div>
                     </div>
@@ -225,63 +227,23 @@
                 </div>
                 <!--#################slider-->
                 <div class="slideshow-container">
-                    <div class="mySlides active">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                    <img src="img/ibmlogo.png">
-                                </div>
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                    <img src="img/sonata.png">
-                                </div>
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                    <img src="img/philip.png">
-                                </div>
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                    <img src="img/volvo.png">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mySlides">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                    <img src="img/ibs.png">
-                                </div>
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                    <img src="img/alliences.png">
-                                </div>
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                    <img src="img/HRB.png">
-                                </div>
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                    <img src="img/global-infonet.png">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mySlides">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                    <img src="img/nintriva.png">
-                                </div>
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                    <img src="img/tofeeride.png">
-                                </div>
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                    <img src="img/forthcode.png">
-                                </div>
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-
-                                    <img src="img/cts.png">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="erly" style="text-decoration: none;" onclick="plusSlides(-1)">❮</a>
-                    <a class="ext" style="text-decoration: none;" onclick="plusSlides(1)">❯</a>
+                   <ul id="flexiselslider">
+    <li><img src="img/1.png" /></li>
+    <li><img src="img/2.png" /></li>
+    <li><img src="img/3.png" /></li>
+    <li><img src="img/4.png" /></li>   
+    <li><img src="img/5.png" /></li>
+    <li><img src="img/6.png" /></li>
+    <li><img src="img/7.png" /></li>
+    <li><img src="img/8.png" /></li>  
+    <li><img src="img/9.png" /></li>
+    <li><img src="img/10.png" /></li>
+    <li><img src="img/11.png" /></li>
+    <li><img src="img/12.png" /></li>
+    <li><img src="img/13.png" /></li>        
+    <li><img src="img/14.png" /></li>                                                
+                </ul>
+                <div class="clearout"></div>
                 </div>
                 <!--#################//////////////slider-->
             </div>
@@ -321,6 +283,21 @@
     <!--###################////// Footer-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+    <script type="text/javascript">
+
+    $("#flexiselslider").flexisel({
+        visibleItems: 4,
+        itemsToScroll: 1,         
+        autoPlay: {
+            enable: true,
+            interval: 5000,
+            pauseOnHover: true
+        }  
+    });
+
+</script>
     <script>
         function show() {
             document.getElementsByClassName('.dropdown-menu').style.display = "block";

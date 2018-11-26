@@ -43,6 +43,7 @@ body {
     width: 100%;
     height: auto;
     text-align: center;
+    overflow: hidden;
 }
 
 .headerimg img {
@@ -50,7 +51,7 @@ body {
 }
 
 .headerimg h1 {
-    margin: 10% 0 1%;
+    margin: 15% 0 1%;
     position: absolute;
     z-index: 1;
     left: 50%;
@@ -131,7 +132,7 @@ body {
 }
 
 #mynavbar ul {
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .carousel-inner {
@@ -348,12 +349,6 @@ h6 {
     color: #fff;
 }
 
-#course h6,
-h3,
-p {
-    margin: 40px 0;
-}
-
 #onsite,
 #online,
 #other {
@@ -503,50 +498,10 @@ footer .container {
     margin: 70px auto;
 }
 
-.mySlides {
-    display: none;
-    padding: 0px;
-    text-align: center;
-    width: 80%;
-    margin: auto;
-}
+.nbs-flexisel-nav-left {
+        left: 20px;    
+    }
 
-
-/* Next & previous buttons */
-
-.erly,
-.ext {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -30px;
-    padding: 13px;
-    color: #d2d2d2;
-    font-weight: bold;
-    font-size: 25px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.mySlides img {
-    width: 100%;
-    max-width: 240px;
-}
-
-.mySlides .container {
-    margin: 0;
-}
-
-.slideshow-container .erly {
-    left: 5%;
-}
-
-.slideshow-container .ext {
-    right: 5%;
-}
 
 .fa {
     padding: 10px;
@@ -675,57 +630,263 @@ footer .container {
 /*############# card #############*/
 
 .course-card {
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    max-width: 260px;
-    margin: 30px auto;
-    transform-style: preserve-3d;
-    transform: translatey(-10px);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.course-card:hover {
-    -webkit-transform: translateZ(0px);
-    transform: translatey(0px);
-}
-
-.course-card img {
-    background: #fff;
-    border-radius: 50%;
-    margin: 50px auto;
-    height: 100px;
-    width: 100px;
-}
-
-.course-card h5 {
-    font-size: 18px;
-}
-
-.course-card p {
-    font-size: 12px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.course-card button {
-    border-radius: 20px;
-    padding: 6px 25px;
-    font-size: 12px;
-}
-
-#footer p {
-    margin: 10px 0px;
-}
-
-#footer .text-center p {
-    margin: 0px 0px;
-}
-
-.codescholarfooter {
+    position: relative;
+    display: inline-block;
     max-width: 300px;
+    min-width: 260px;
+    width: 100%;
+    height: 450px;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
+
+.bg1 {
+    background-color: #50a4dc;
+}
+
+.bg2 {
+    background-color: #ffc46d;
+}
+
+.bg3 {
+    background-color: #ff847c;
+}
+
+.bg4 {
+    background-color: #61b390;
+}
+
+.course-card .poster {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.course-card:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -480px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #000 50%, transparent);
+    transition: 0.5s;
+}
+
+.course-card .poster img {
+    background: #fff;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: .5 ease;
+}
+
+.course-card .details h1 {
+    color: #000;
+    margin: 5px 0;
+}
+
+.course-card .details span {
+    font-size: 15px;
+    color: #5f0303;
+    margin: 0px 5px;
+}
+
+.course-card .details {
+    position: absolute;
+    bottom: -200px;
+    transition: 0.5s;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.course-card .tags {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.course-card .tags div {
+    color: #fff;
+    margin: 5px 2px 0 5px;
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 3px;
+    min-width: 45px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.course-card .tags div:last-child {
+    margin: 5px 0px 0 5px;
+}
+
+.course-card .info {
+    color: #f9f9f9;
+    padding: 10px;
+}
+
+.course-card .info p {
+    font-size: 12px;
+    margin: 0px 0 20px 0;
+}
+
+.info span {
+    background: #fff;
+    color: #000;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.course-card:hover .details {
+    bottom: 20px;
+}
+
+.course-card:hover .poster {
+    filter: blur(15px);
+}
+
+.course-card:hover.course-card:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #000000c9 10%, transparent);
+    transition: 0.5s;
+}
+
+.bg1 .info span:hover {
+    background: #50a4dc;
+    color: #fff;
+}
+
+.bg2 .info span:hover {
+    background: #de9d31;
+    color: #fff;
+}
+
+.bg3 .info span:hover {
+    background: #ff847c;
+    color: #fff;
+}
+
+.bg4 .info span:hover {
+    background: #61b390;
+    color: #fff;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.view-less {
+    height:1050px;
+    overflow: hidden;
+}
+
+.p-5 {
+    padding: 5%;
+}
+
+/* ####################### Map & Contact Section */
+
+ .contact{
+    background-color:#fff;
+    padding: 0;
+ }
+ .contact .left{
+    height:550px;
+    background-color:#000;
+    padding-right: 0;
+    
+ }
+ .contact .right{
+    height:550px;
+   
+ }
+ .contact .right h1{
+    margin:20px 0 0 40px;
+ }
+ .about-left .fa{
+    color:#000;
+    font-size:25px;
+    margin:0 10px 0 40px;
+ }
+ 
+ .about-left h3{
+   margin-top:0;
+ }
+ .about-left h4{
+   margin:0 0 10px 90px;
+ }
+ .about-right{
+    
+ 
+    text-align:right
+ }
+ .about-right h3{
+    margin-top:0;  
+ }
+ .contact-form{
+    
+    height:200px;
+    padding-left:110px;
+    padding-top:10px;
+ }
+.contact-form input{
+    width:200px;
+    height:30px;
+    margin:10px 20px 10px 0;
+    outline:none;
+    padding-left:10px;
+    border:.5px solid rgb(78, 78, 78);
+    
+ }
+ .contact-form input[type=number]::-webkit-inner-spin-button, 
+ .contact-form input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.black-btn{
+    padding:10px 20px;
+    background-color:#000;
+    color:#fff;
+ }
+ .black-btn:hover{
+     box-shadow:0 5px 10px rgba(0,0,0,0.5);
+    cursor:pointer;
+ }
+   iframe{
+     width: 100%;
+     height: 100%;
+     opacity:.5; 
+   }
+
+  .contact hr {
+    border: 0;
+    width: 100px;
+    border-top: 5px solid #e9c435;
+    margin: 10px 40px;
+}
+
+
+
+ .clear{
+    clear:both;
+ }
+
 
 
 /* ############### @media ################  */
@@ -790,13 +951,38 @@ footer .container {
         padding-top: 5%;
     }
 }
+@media(min-width:1600px){
+    .about-right h4{
+        margin-top:50px;
+    }
+}
 
 @media(max-width:1500px) {
     .parallax {
         padding-top: 10%;
     }
 }
-
+@media(max-width:1440px){
+    .contact .right{
+        height: 650px;
+    }
+    .contact .left{
+        height:650px;
+    }
+    .about-right h4{
+        margin-top:0px;
+    }
+}
+@media (max-width: 1600px) and (min-width: 1200px) {
+.about-right{
+    width: 60%;
+    text-align: left;
+    margin: 0 0 10px 90px;
+}
+.about-left{
+    width: 75%;
+}
+}
 @media(max-width:1300px) {
     .parallax {
         padding-top: 25%;
@@ -804,6 +990,14 @@ footer .container {
 }
 
 @media(max-width:1200px) {
+    .about-right{
+        text-align:left;
+     }
+     .about-right h3,.about-right h4{
+        margin:0 0 10px 90px;
+     }
+     .contact{
+        padding-bottom:40px;}
     .header-qotes h1 {
         font-size: 40px;
     }
@@ -824,12 +1018,17 @@ footer .container {
     .submit {
         width: 20%;
     }
+    .contact .right{
+        height: 500px;
+    }
 }
+
 
 @media(max-width:1150px) {
     .parallax {
         padding-top: 30%;
     }
+
 }
 
 @media(max-width:1050px) {
@@ -894,6 +1093,47 @@ footer .container {
         height: calc(100% - 100px);
         background: #000;
     }
+    #section2 .specialities {
+        padding: 2%;
+    }
+}
+
+@media (max-width: 1270px) and (min-width: 1200px) {
+    .specialities .container .container {
+        width: 1100px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .p-5 {
+        padding: 2%;
+    }
+}
+@media (max-width: 1100px) and (min-width: 992px) {
+    .specialities .container .container .row .col-md-4{
+        width:50%;
+    }
+}
+
+@media(max-width:800px){
+    .about-left .fa{
+        margin: 0 10px 0 -10px;
+    }
+    .about-left h4{
+        margin: 0 0 10px 40px;
+    }
+    .about-right h3,.about-right h4{
+        margin:0 0 10px 40px;
+    }
+    .contact-form{
+        padding-left: 60px;
+    }
+    .contact .right h1{
+        font-size: 25px;
+        margin:20px 0 0 10px;
+    }
+    .contact hr{
+        margin: 10px 10px; 
+    }
 }
 
 @media(max-width:767px) {
@@ -944,6 +1184,12 @@ footer .container {
     .carousel-inner {
         height: calc( 100% - 60px);
     }
+    .headerimg img{
+        width: auto;
+        height: 300px;
+    }
+    
+         
 }
 
 @media(max-width:700px) {
@@ -982,6 +1228,9 @@ footer .container {
     .header-qotes h1 {
         font-size: 20px;
     }
+    .contact .right{
+        height:540px;
+    }
 }
 
 @media(max-width:500px) {
@@ -992,7 +1241,8 @@ footer .container {
         max-width: 80%;
     }
     .headerimg h1 {
-        margin: 7% 0 0 0;
+        margin: 140px 0 0 0;
+        font-size: 24px;
     }
     .specialities ul {
         padding-left: 35px;
@@ -1001,6 +1251,9 @@ footer .container {
         margin: 40px 0 10px 30px;
     }
     .specialities ul li h3 {
+        font-size: 16px;
+    }
+    .contact h4{
         font-size: 16px;
     }
 }
@@ -1023,5 +1276,11 @@ footer .container {
     }
     .specialities p {
         margin: 40px 0 10px 35px;
+    }
+}
+@media(max-width:360px){
+    .specialities .container{
+        padding-left: 0;
+        padding-right: 0;
     }
 }

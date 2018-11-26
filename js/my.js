@@ -19,3 +19,17 @@ function showDivs(n) {
 function showDiv() {
     document.getElementById('.dropdown-menu').style.display = "block";
 }
+
+
+$(window).load(function() {
+  
+    $("#flexiselslider").flexisel({
+        visibleItems: 4,
+        itemsToScroll: 1,         
+        autoPlay: {
+            enable: true,
+            interval: 5000,
+            pauseOnHover: true
+        }  
+    });
+});
