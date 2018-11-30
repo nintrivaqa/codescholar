@@ -37,12 +37,13 @@
                                 <ul id="nav-menu" class="nav navbar-nav navbar-right">
                                     <li><a class="mnu" href="#">Home</a></li>
                                     <li><a class="mnu" href="about.html">About</a></li>
+
                                     <li class="mnu dropdown">
                                         <a class="mnu dropdown-toggle" data-toggle="dropdown" href="#">Courses
-                                    <span class="caret"></span></a>
-                                        <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
-                                            <li class="dropdown-submenu" data-toggle="dropdown-submenu">
-                                                <a tabindex="-1" href="#">Coding Bootcamps</a>
+                                            <span class="caret"></span></a>
+                                        <ul class="dropdown-menu multi-level" role="menu">
+                                            <li class="dropdown-submenu">
+                                                <a  class="test" data-toggle="dropdown-submenu" href="#">Coding Bootcamps</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="onsite.html">Onsite Bootcamp</a></li>
                                                     <li><a href="blended.html">Blended Bootcamp</a></li>
@@ -51,6 +52,7 @@
                                             <li><a href="other.html">Other Courses</a></li>
                                         </ul>
                                     </li>
+
                                     <li><a class="mnu" href="FAQ.html">FAQ</a></li>
                                     <li><a class="mnu" href="contact.html">Contact Us</a></li>
                                     <li><a href="#"><button class="rgtr" type="button"> Register</button></a></li>
@@ -235,6 +237,7 @@
     <li><img src="img/5.png" /></li>
     <li><img src="img/6.png" /></li>
     <li><img src="img/7.png" /></li>
+    <li><img src="img/8.png" /></li>  
     <li><img src="img/9.png" /></li>
     <li><img src="img/10.png" /></li>
     <li><img src="img/11.png" /></li>
@@ -280,6 +283,7 @@
         </footer>
     </div>
     <!--###################////// Footer-->
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
@@ -296,13 +300,20 @@
         }  
     });
 
+
+
+
+    $(document).ready(function(){
+    $('.dropdown-submenu a.test').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  });
+
+
 </script>
-    <script>
-        function show() {
-            document.getElementsByClassName('.dropdown-menu').style.display = "block";
-        }
-    </script>
-    <script>
+   <script>
         var myIndex = 0;
         carousel();
 

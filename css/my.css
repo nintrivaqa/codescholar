@@ -1,7 +1,7 @@
 body {
     background: #fff;
     background-size: 100% 100%;
-    font-family: Arial, sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 @font-face {
@@ -224,7 +224,7 @@ h4,
     font-family: "Segoe UI", Arial, sans-serif;
     font-weight: 700;
     height: 25px;
-    margin: 20px 0 25px 0;
+    margin: 20px 0 30px 0;
 }
 
 #os {
@@ -575,9 +575,7 @@ footer .container {
     border-radius: 0 6px 6px 6px;
 }
 
-.dropdown-submenu:hover>.dropdown-menu {
-    display: block;
-}
+
 
 .dropdown-submenu>a:after {
     display: block;
@@ -898,12 +896,15 @@ footer .container {
     #other {
         padding: 5% 20%;
     }
+
 }
 
 @media(min-width:768px) {
     .carousel-inner {
         height: calc( 100% - 66px);
     }
+
+        
 }
 
 @media(min-width:992px) {
@@ -1188,6 +1189,9 @@ footer .container {
     .headerimg img{
         width: auto;
         height: 190px;
+    }
+    .dropdown-submenu>a:after {
+        margin-top: 6px;
     }
     
          

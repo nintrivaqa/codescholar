@@ -37,7 +37,7 @@
             display: none;
             background-color: white;
             overflow: hidden;
-            box-shadow: none;
+            box-shadow:none;
         }
         
         .glyphicon {
@@ -84,9 +84,9 @@
                                     <span class="caret"></span></a>
                                         <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                                             <li class="dropdown-submenu" data-toggle="dropdown-submenu">
-                                                <a tabindex="-1" href="#">Coding Bootcamps</a>
+                                                <a class="test" tabindex="-1" href="#">Coding Bootcamps</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="onsite.html">Onsite Bootcamp</a></li>
+                                                    <li><a href="#">Onsite Bootcamp</a></li>
                                                     <li><a href="blended.html">Blended Bootcamp</a></li>
                                                 </ul>
                                             </li>
@@ -106,7 +106,7 @@
                 <!--###############################################################################################-->
                 <!--#################slider-->
                 <div class="headerimg">
-                    <h1  style="border-bottom: 5px solid #e9c435;">F.A.Q</h1>
+                    <h1 style="border-bottom: 5px solid #e9c435;">F.A.Q</h1>
                     <img src="img/Faq-header.jpg">
                 </div>
                 <!--#################/////////////slider-->
@@ -205,6 +205,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <script>
+            $(document).ready(function(){
+     $('.dropdown-submenu a.test').on("click", function(e){
+       $(this).next('ul').toggle();
+       e.stopPropagation();
+       e.preventDefault();
+     });
+   }); 
+         
+     </script>
     <script type="text/javascript">jQuery(function ($) {
         $(document).ready(function(){
                 $("h4").click(function(){

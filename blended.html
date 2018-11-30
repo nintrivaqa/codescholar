@@ -41,7 +41,7 @@
                                     <span class="caret"></span></a>
                                         <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                                             <li class="dropdown-submenu" data-toggle="dropdown-submenu">
-                                                <a tabindex="-1" href="#">Coding Bootcamps</a>
+                                                <a class="test" tabindex="-1" href="#">Coding Bootcamps</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="blended.html">Onsite Bootcamp</a></li>
                                                     <li><a href="#">Blended Bootcamp</a></li>
@@ -208,6 +208,16 @@ the course offers flexibility to work at your own pace within realistic limits.
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+           $(document).ready(function(){
+    $('.dropdown-submenu a.test').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  }); 
+        
+    </script>
 </body>
 
 </html>

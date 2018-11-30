@@ -43,7 +43,7 @@
                                     <span class="caret"></span></a>
                                         <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                                             <li class="dropdown-submenu" data-toggle="dropdown-submenu">
-                                                <a tabindex="-1" href="#">Coding Bootcamps</a>
+                                                <a class="test" tabindex="-1" href="#">Coding Bootcamps</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="onsite.html">Onsite Bootcamp</a></li>
                                                     <li><a href="blended.html">Blended Bootcamp</a></li>
@@ -149,7 +149,7 @@ Objective C or just about anything which makes them future ready.
 <li><img src="img/5.png" /></li>
 <li><img src="img/6.png" /></li>
 <li><img src="img/7.png" /></li>
- 
+<li><img src="img/8.png" /></li>  
 <li><img src="img/9.png" /></li>
 <li><img src="img/10.png" /></li>
 <li><img src="img/11.png" /></li>
@@ -210,6 +210,15 @@ Objective C or just about anything which makes them future ready.
             pauseOnHover: true
         }  
     });
+
+
+    $(document).ready(function(){
+    $('.dropdown-submenu a.test').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  });
 
 </script>
     <script>

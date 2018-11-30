@@ -39,8 +39,8 @@
                                         <a class="mnu dropdown-toggle" data-toggle="dropdown" href="#">Courses
                                     <span class="caret"></span></a>
                                         <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
-                                            <li class="dropdown-submenu" data-toggle="dropdown-submenu">
-                                                <a tabindex="-1" href="#">Coding Bootcamps</a>
+                                            <li class="dropdown-submenu">
+                                                <a class="test" tabindex="-1" href="#">Coding Bootcamps</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="onsite.html">Onsite Bootcamp</a></li>
                                                     <li><a href="blended.html">Blended Bootcamp</a></li>
@@ -50,7 +50,7 @@
                                         </ul>
                                     </li>
                                     <li><a class="mnu" href="FAQ.html">FAQ</a></li>
-                                    <li><a class="mnu" href="contact.html">Contact Us</a></li>
+                                    <li><a class="mnu" href="#">Contact Us</a></li>
                                     <li><a href="#"><button class="rgtr" type="button"> Register</button></a></li>
                                     <li><a href="#"><button class="login" type="button">Login</button></a></li>
                                 </ul>
@@ -62,7 +62,7 @@
                 <!--###############################################################################################-->
                 <!--#################slider-->
                 <div class="headerimg">
-                    
+
                     <img src="img/Other-Courses.jpg">
                 </div>
                 <!--#################/////////////slider-->
@@ -512,6 +512,16 @@
                 $(".view-more").hide();
             });
         })
+    </script>
+    <script>
+           $(document).ready(function(){
+    $('.dropdown-submenu a.test').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  }); 
+        
     </script>
 </body>
 
