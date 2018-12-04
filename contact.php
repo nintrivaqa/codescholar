@@ -129,7 +129,7 @@ $mailer->send($message);
                                           </h4>
                                        </div>
                                        <div class="about-right col-md-12 col-lg-6">
-                                          <h4>Cochin- 682030<br>Kerala, India<br> Ph:09746088892</h3>
+                                          <h4>Cochin- 682030<br>Kerala, India<br> Ph:9995875073<br>ph:7736407223</h3>
                                        </div>
                                        <div class="contact-form col-lg-12">
                                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
