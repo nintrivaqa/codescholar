@@ -38,7 +38,7 @@ $body = 'name :'.$first_name.' '.$last_name.'  Phone: '.$phone.'  Email: '.$emai
  
 $message = (new Swift_Message('Email From Codescholar'))
   ->setFrom(['Codescholar@gmail.com' => 'Codescholar'])
-  ->setTo(['susmithavs49@gmail.com'])
+  ->setTo(['qa.nintriva@gmail.com'])
   ->setBody($body)
   ->setContentType('text/html')
 ;
