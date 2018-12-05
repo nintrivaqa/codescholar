@@ -83,8 +83,6 @@ $mailer->send($message);
                                     </li>
                                     <li><a class="mnu" href="FAQ.html">FAQ</a></li>
                                     <li><a class="mnu" href="#">Contact Us</a></li>
-                                    <li><a href="#"><button class="rgtr" type="button"> Register</button></a></li>
-                                    <li><a href="#"><button class="login" type="button">Login</button></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -139,7 +137,6 @@ $mailer->send($message);
                                           <br><br>
                                           <!-- <button type="submit" class="black-btn">SEND</button> -->
                                           <button type="submit" class="black-btn" name="submit" value="SEND">SEND</button>
-
                                         </form>
                                        </div>
                                     </div>
