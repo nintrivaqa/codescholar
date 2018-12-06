@@ -881,13 +881,81 @@ footer .container {
 }
 
 
+/*   form   */
+.modal-header {
+    padding: 15px;
+    border-bottom:none;
+}
 
+
+.modal-body input {
+    border: none;
+    border-bottom: 1px solid #b2b2b2;
+    margin-bottom: 30px;
+    max-width: 340px;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 20px;
+    outline: none;
+}
+
+.modal-body .container-fluid{
+    width: 80%;
+}
+.image-pop-up{
+    margin:0 auto;
+    width:50%;
+    margin-top: 65px;
+}
+.image-pop-up h1{
+    text-align: center;
+}
+
+.modal-footer {
+    padding: 45px 15px;
+    text-align: center;
+    border-top: none;
+}
+.submit-form-btn{
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #009147;
+    color: #fff;
+}
+.submit-form-btn:hover{
+    box-shadow:0 5px 20px rgba(0,0,0,0.5);
+    cursor:pointer;
+ }
+
+ .drop-btn{
+    border: none;
+    border-bottom: 1px solid #b2b2b2;
+    margin-bottom: 30px;
+    max-width: 340px;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 20px;
+    outline: none;
+    text-align: right;
+    border-radius: 0;
+    color: #000;
+    box-shadow: none;
+    padding-bottom: 15px; 
+}
+.modal .dropdown-menu{
+    background-color: #fff;
+    max-width: 340px;
+    width: 100%;
+    top:60%;
+}
+.modal .dropdown-menu>li>a {
+    color:#403e3e;
+}
  .clear{
     clear:both;
  }
-
-
-
 /* ############### @media ################  */
 
 @media(min-width:568px) {
@@ -903,7 +971,18 @@ footer .container {
     .carousel-inner {
         height: calc( 100% - 66px);
     }
-
+    .modal-dialog {
+        width: 60%;
+        margin: 5% auto;
+        margin-bottom: 0px
+    }
+    .modal-body { 
+        padding: 5% 16px;
+    }
+    .submit-form-btn {
+        width: 250px;
+        height: 80px;
+    }
         
 }
 
@@ -1287,5 +1366,25 @@ footer .container {
     .specialities .container{
         padding-left: 0;
         padding-right: 0;
+    }
+}
+@media(max-height:720px){
+    .header-qotes{
+        top: 25%;
+    }
+}
+@media(max-height:520px){
+    .header-qotes{
+        top: 20%;
+    }
+}
+@media(max-height:460px){
+    .header-qotes{
+        top: 10%;
+    }
+}
+@media(max-height:430px){
+    .header-qotes{
+        top: 5%;
     }
 }

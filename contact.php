@@ -39,7 +39,7 @@ $error=0;
                                           <span class="icon-bar"></span>
                                           <span class="icon-bar"></span>                        
                                         </button>
-                                <a class="navbar-brand" href="#"><img src="img/Code-Scholar_logo.png"></a>
+                                <a class="navbar-brand" href="index.html"><img src="img/Code-Scholar_logo.png"></a>
                             </div>
                             <div class="collapse navbar-collapse" id="myNavbar">
                                 <ul id="nav-menu" class="nav navbar-nav navbar-right">
@@ -50,7 +50,7 @@ $error=0;
                                     <span class="caret"></span></a>
                                         <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                                             <li class="dropdown-submenu" data-toggle="dropdown-submenu">
-                                                <a tabindex="-1" href="#">Coding Bootcamps</a>
+                                                <a class="test" tabindex="-1" href="#">Coding Bootcamps</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="blended.html">Onsite Bootcamp</a></li>
                                                     <li><a href="blended.html">Blended Bootcamp</a></li>
@@ -171,7 +171,6 @@ $error=0;
                         <div class="col-lg-4 col-md-4 text-center">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
                             <p class="copyright">(c) copyright owned and reserverd by CodeScholar 2018.</p>
                         </div>
                         <div id="newsletter" class="col-lg-4 col-md-4 text-right">
