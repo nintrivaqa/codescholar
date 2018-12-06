@@ -121,7 +121,7 @@ body {
 }
 
 #header .container-fluid {
-    padding: 0 3%;
+    padding: 4px 3%;
     height: auto;
 }
 
@@ -1188,7 +1188,7 @@ footer .container {
     }
     .headerimg img{
         width: auto;
-        height: 240px;
+        height: 200px;
     }
     .dropdown-submenu>a:after {
         margin-top: 6px;

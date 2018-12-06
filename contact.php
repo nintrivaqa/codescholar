@@ -83,8 +83,6 @@ $mailer->send($message);
                                     </li>
                                     <li><a class="mnu" href="FAQ.html">FAQ</a></li>
                                     <li><a class="mnu" href="#">Contact Us</a></li>
-                                    <li><a href="#"><button class="rgtr" type="button"> Register</button></a></li>
-                                    <li><a href="#"><button class="login" type="button">Login</button></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -129,7 +127,7 @@ $mailer->send($message);
                                           </h4>
                                        </div>
                                        <div class="about-right col-md-12 col-lg-6">
-                                          <h4>Cochin- 682030<br>Kerala, India<br> Ph:09746088892</h3>
+                                          <h4>Cochin- 682030<br>Kerala, India<br> Ph:9995875073<br>Ph:7736407223</h3>
                                        </div>
                                        <div class="contact-form col-lg-12">
                                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
@@ -139,7 +137,6 @@ $mailer->send($message);
                                           <br><br>
                                           <!-- <button type="submit" class="black-btn">SEND</button> -->
                                           <button type="submit" class="black-btn" name="submit" value="SEND">SEND</button>
-
                                         </form>
                                        </div>
                                     </div>
@@ -188,6 +185,15 @@ $mailer->send($message);
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $('.dropdown-submenu a.test').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  });
+    </script>
 </body>
 
 </html>
