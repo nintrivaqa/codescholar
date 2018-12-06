@@ -79,7 +79,7 @@
                                     <div class="header-qotes">
                                         <h1>Zero to Job Ready in 12 weeks.</h1>
                                         <p>Structured Training programs in software development - Fulltime, Parttime,Onsite and Online </p>
-                                        <a href="#"><button class="rgtr" type="button">Apply Now</button></a>
+                                        <a href="#"><button type="button" class="rgtr" data-toggle="modal" data-target="#myModal">Apply Now</button></a>
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +89,7 @@
                                     <div class="header-qotes">
                                         <h1>Moulding software professionals loved by the industry.</h1>
                                         <p>Cutting Edge Curriculum mapped to Industry needs designed to make you Future Ready</p>
-                                        <a href="#"><button class="rgtr" type="button"> Explore Courses
+                                        <a href="#"><button type="button" class="rgtr" data-toggle="modal" data-target="#myModal">Explore Courses
                                         </button></a>
                                     </div>
                                 </div>
@@ -100,7 +100,7 @@
                                     <div class="header-qotes">
                                         <h1>Transform your career</h1>
                                         <p>Upgrade yourself with on-demand skills in the high growth technology industry</p>
-                                        <a href="#"><button class="rgtr" type="button">Explore Courses</button></a>
+                                        <a href="#"><button type="button" class="rgtr" data-toggle="modal" data-target="#myModal">Explore Courses</button></a>
                                     </div>
                                 </div>
                             </div>
@@ -301,37 +301,69 @@
         <div class="modal-body">
            <div class="container-fluid">
               <div class="row">
-               <div class="col-lg-6">
-                  <label>First Name</label><br>
-                  <input type="text">
-               </div>
-               <div class="col-lg-6">
-                  <label>Last Name</label><br>
-                  <input type="text">
-               </div>
-               <div class="col-lg-6">
-                  <label>Email</label><br>
-                  <input type="text">
-               </div>
-               <div class="col-lg-6">
-                  <label>Phone</label><br>
-                  <input type="text">
-               </div>
+                <div class="col-lg-6">
+                    <label>First Name</label><br>
+                    <input type="text">
+                 </div>
+                 <div class="col-lg-6">
+                    <label>Last Name</label><br>
+                    <input type="text">
+                 </div>
+                 <div class="col-lg-6">
+                    <label>Email</label><br>
+                    <input type="email">
+                 </div>
+                 <div class="col-lg-6">
+                    <label>Phone</label><br>
+                    <input type="number">
+                 </div>
                  <div class="col-lg-6">
                   <label>Education Qualification</label><br>
-                  <input type="text">
+                  <div class="dropdown">
+                    <button class="drop-btn" type="button" data-toggle="dropdown">
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">HTML</a></li>
+                      <li><a href="#">CSS</a></li>
+                      <li><a href="#">JavaScript</a></li>
+                    </ul>
+                  </div>
                </div>
                <div class="col-lg-6">
                   <label>Branch</label><br>
-                  <input type="text">
+                  <div class="dropdown">
+                    <button class="drop-btn" type="button" data-toggle="dropdown">
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">HTML</a></li>
+                      <li><a href="#">CSS</a></li>
+                      <li><a href="#">JavaScript</a></li>
+                    </ul>
+                  </div>
                </div>
                <div class="col-lg-6">
                   <label>Year of Passing(YOP)</label><br>
-                  <input type="text">
+                  <div class="dropdown">
+                    <button class="drop-btn" type="button" data-toggle="dropdown">
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">HTML</a></li>
+                      <li><a href="#">CSS</a></li>
+                      <li><a href="#">JavaScript</a></li>
+                    </ul>
+                  </div>
                </div>
                <div class="col-lg-6">
                   <label>previous Experience</label><br>
-                  <input type="text">
+                  <div class="dropdown">
+                    <button class="drop-btn" type="button" data-toggle="dropdown">
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">HTML</a></li>
+                      <li><a href="#">CSS</a></li>
+                      <li><a href="#">JavaScript</a></li>
+                    </ul>
+                  </div>
                </div>
             </div>
            </div>
