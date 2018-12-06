@@ -1291,7 +1291,7 @@ footer .container {
 }
 @media(max-height:720px){
     .header-qotes{
-        top: 30%;
+        top: 25%;
     }
 }
 @media(max-height:520px){
@@ -1301,11 +1301,11 @@ footer .container {
 }
 @media(max-height:460px){
     .header-qotes{
-        top: 15%;
+        top: 10%;
     }
 }
 @media(max-height:430px){
     .header-qotes{
-        top: 8%;
+        top: 5%;
     }
 }
