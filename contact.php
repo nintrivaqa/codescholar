@@ -26,7 +26,7 @@ if(isset($_POST['submit'])) {
 
  
 // Create the Transport
-$transport = (new Swift_SmtpTransport('smtp.googlemail.com', 465, 'ssl'))
+$transport = (new Swift_SmtpTransport('smtp.googlemail.com', 587, 'tls'))
   ->setUsername('qa.nintriva@gmail.com')
   ->setPassword('nintriva123456');
  
