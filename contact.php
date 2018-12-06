@@ -72,7 +72,7 @@ $mailer->send($message);
                                     <span class="caret"></span></a>
                                         <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                                             <li class="dropdown-submenu" data-toggle="dropdown-submenu">
-                                                <a tabindex="-1" href="#">Coding Bootcamps</a>
+                                                <a class="test" tabindex="-1" href="#">Coding Bootcamps</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="blended.html">Onsite Bootcamp</a></li>
                                                     <li><a href="blended.html">Blended Bootcamp</a></li>
