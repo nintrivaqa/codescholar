@@ -1289,3 +1289,23 @@ footer .container {
         padding-right: 0;
     }
 }
+@media(max-height:720px){
+    .header-qotes{
+        top: 30%;
+    }
+}
+@media(max-height:520px){
+    .header-qotes{
+        top: 20%;
+    }
+}
+@media(max-height:460px){
+    .header-qotes{
+        top: 15%;
+    }
+}
+@media(max-height:430px){
+    .header-qotes{
+        top: 8%;
+    }
+}
