@@ -12,41 +12,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/w3.css">
     <link rel="stylesheet" href="css/my.css">
+    <style>
+.error {color: #FF0000;}
+.sucs {color:#008000}
+</style>
 </head>
 
 <body>
 <?php
-require_once 'vendor/autoload.php';
-if(isset($_POST['submit'])) {
-   
-    $first_name= $_POST["first_name"]; 
-    $last_name= $_POST["last_name"]; 
-    $phone= $_POST["phone"]; 
-    $email= $_POST["email"]; 
+$firstnameErr=$lastnameErr=$emailErr=$phoneErr=$success="";
+$error=0;
 
- 
-// Create the Transport
-$transport = (new Swift_SmtpTransport('smtp.googlemail.com', 587, 'tls'))
-  ->setUsername('qa.nintriva@gmail.com')
-  ->setPassword('nintriva123456');
- 
-// Create the Mailer using your created Transport
-$mailer = new Swift_Mailer($transport);
- 
-// Create a message
-$body = 'name :'.$first_name.' '.$last_name.'  Phone: '.$phone.'  Email: '.$email;
- 
-$message = (new Swift_Message('Email From Codescholar'))
-  ->setFrom(['Codescholar@gmail.com' => 'Codescholar'])
-  ->setTo(['qa.nintriva@gmail.com'])
-  ->setBody($body)
-  ->setContentType('text/html')
-;
- 
-// Send the message
-$mailer->send($message);
-}
 ?>
+
     <!--################### Header-->
     <header>
         <div class="row">
@@ -130,13 +108,41 @@ $mailer->send($message);
                                           <h4>Cochin- 682030<br>Kerala, India<br> Ph:9995875073<br>Ph:7736407223</h3>
                                        </div>
                                        <div class="contact-form col-lg-12">
-                                       <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                                       <form name="testForm" id="testForm"  method="POST"  >
+                                       
 
-                                          <input type="text" name="first_name" placeholder="First Name"><input type="text" name="last_name" placeholder="Last Name"><br>
-                                          <input type="number" name="phone" placeholder="Phone"><input type="email" name="email" placeholder="Email">
+                                          <input type="text" id="nam" name="first_name" value="<?php echo isset($_POST["first_name"]) ? $_POST["first_name"] : '';?>"  placeholder="First Name">
+                                          
+                                         
+                                          <input type="text" id="last" name="last_name" value="<?php echo isset($_POST["last_name"]) ? $_POST["last_name"] : '';?>"  placeholder="Last Name">
+                                          <br>
+                                          <div class="col-md-12">
+                                            <div class="col-md-4">
+                                                <span id="namespan" class="error"> <?php echo $firstnameErr;?></span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <span id="lastnamespan"class="error"> <?php echo $lastnameErr;?></span>
+                                            </div>
+                                          </div>
+                                           
+                                           <br>
+                                          <input type="number" id="phone" name="phone" value="<?php echo isset($_POST["phone"]) ? $_POST["phone"] : '';?>"  placeholder="Phone">
+                                         
+                                          <input type="email" id="email" name="email" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : '';?>" placeholder="Email">
+                                    
+                                          <br>
+                                         <div class="col-md-12">
+                                            <div class="col-md-4">
+                                                <span id="phonespan" class="error"> <?php echo $phoneErr;?></span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <span id="emailspan" class="error"> <?php echo $emailErr;?></span>
+                                            </div>
+                                          </div>
                                           <br><br>
                                           <!-- <button type="submit" class="black-btn">SEND</button> -->
                                           <button type="submit" class="black-btn" name="submit" value="SEND">SEND</button>
+                                          <span id="success" class="sucs"> <?php echo $success;?></span>
                                         </form>
                                        </div>
                                     </div>
@@ -192,8 +198,116 @@ $mailer->send($message);
       e.stopPropagation();
       e.preventDefault();
     });
+    
   });
+  function clearform()
+{
+    document.getElementById("nam").value=""; //don't forget to set the textbox ID
+    document.getElementById("last").value=""; //don't forget to set the textbox ID
+   
+}
     </script>
+
+    <?php
+
+require_once 'vendor/autoload.php';
+if(isset($_POST['submit'])) {
+  
+    echo "
+    <script>
+   
+        var first_name= document.getElementById('nam').value; 
+        var last_name = document.getElementById('last').value; 
+        var email = document.getElementById('email').value; 
+        var phone = document.getElementById('phone').value; 
+        var error=0;
+        var letters = /^[A-Za-z]+$/;
+        var phoneno = /^\d{10}$/;
+       if(first_name==''){
+        document.getElementById('namespan').textContent='First Name is Required';
+        error=1;
+
+       }
+    
+       else if (!letters.test(first_name)) {
+        
+        document.getElementById('namespan').textContent='Only letters and white space allowed';
+        error=1;
+
+       }
+       if(last_name==''){
+        document.getElementById('lastnamespan').textContent='Last Name is Required';
+        error=1;
+
+       }
+    
+       else if (!letters.test(last_name)) {
+        
+        document.getElementById('lastnamespan').textContent='Only letters and white space allowed';
+        error=1;
+
+       }
+       if(email=='')
+       {
+        document.getElementById('emailspan').textContent='Email is Required';
+        error=1;
+
+       }
+       else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+       {
+        document.getElementById('emailspan').textContent='Invalid Email';
+        error=1;
+       }
+      
+       if(phone=='')
+       {
+        document.getElementById('phonespan').textContent='Phone Number is Required';
+        error=1;
+
+       }
+     else if(!phone.match(phoneno))
+     {
+        document.getElementById('phonespan').textContent='Invalid Phone Number';
+        error=1;
+
+     }
+     if(error==0)
+     {
+         
+         </script>
+";
+$transport = (new Swift_SmtpTransport('smtp.googlemail.com', 587, 'tls'))
+  ->setUsername('qa.nintriva@gmail.com')
+  ->setPassword('nintriva123456');
+ 
+// Create the Mailer using your created Transport
+$mailer = new Swift_Mailer($transport);
+ 
+// Create a message
+$first_name=$_POST['first_name'];
+$last_name=$_POST['last_name'];
+$email=$_POST['email'];
+$phone=$_POST['phone'];
+$body = 'First Name :'.$first_name.' Last Name :'.$last_name.'  Phone: '.$phone.'  Email: '.$email;
+ 
+ 
+ $message = (new Swift_Message('Email From Codescholar'))
+  ->setFrom(['Codescholar@gmail.com' => 'Codescholar'])
+  ->setTo(['qa.nintriva@gmail.com'])
+  ->setBody($body)
+  ->setContentType('text/html')
+;
+ 
+// Send the message
+$mailer->send($message);
+if($message){
+    echo "
+    <script>
+    document.getElementById('success').textContent='Thank you! Your Details has been sent successfully ';
+    </script>
+";
+}
+}?>
 </body>
 
 </html>
