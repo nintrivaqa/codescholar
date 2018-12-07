@@ -385,7 +385,8 @@
                   <div class="dropdown">
                     <select class="drop-btn" name='year_admission' id='branch'>
                         <option value='' selected disabled>Choose here</option>
-                        <option value='Computer Science'>Computer Science</option>                                      <option value='Information Technology'>Information Technology</option>
+                        <option value='Computer Science'>Computer Science</option>                                 
+                        <option value='Information Technology'>Information Technology</option>
                         <option value='Electronics and Communication'>Electronics and Communication</option>
                         <option value='Electronics and Electrical'>Electronics and Electrical</option>
                         <option value='Civil'>Civil</option>
@@ -425,12 +426,14 @@
                   <div class="dropdown">
                     <select class="drop-btn" name='year_admission' id='experience'>
                     <option value='' selected disabled>Choose here</option>
-                        <option value='1 month'>1 month</option>                               <option value='2 months'>2 months</option>
+                        <option value='1 month'>1 month</option>                          
+                             <option value='2 months'>2 months</option>
                         <option value='3 months'>3 months</option>
                         <option value='4 months'>4 months</option>
                         <option value='5 months'>5 months</option>
                         <option value='6 months'>6 months</option>
-                        <option value='7 months'>7 months</option>                             <option value='8 months'>8 months</option>
+                        <option value='7 months'>7 months</option>                            
+                         <option value='8 months'>8 months</option>
                         <option value='9 months'>9 months</option>
                         <option value='10 months'>10 months</option>
                         <option value='11 months'>11 months</option>
@@ -451,8 +454,9 @@
                   <button class="submit-form-btn" type="submit" id="submit" name="submit" class="submit-form">Submit</button>
                   <span id='sucspan' class="sucs"><?php echo $success;?></span>
                   </div>
+                  <br>
                   <div class="col-lg-4">
-                  <button class="btn btn-sm btn-warning" id="load"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button>
+                  <button class="btn btn-lg btn-warning" id="load"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button>
                   </div>
                 
             </div>
