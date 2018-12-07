@@ -21,10 +21,107 @@
 <body>
 <?php
 $firstnameErr=$lastnameErr=$emailErr=$phoneErr=$success="";
+$first_name=$last_name=$email=$phone="";
 $error=0;
+require_once 'vendor/autoload.php';
+if(isset($_POST['submit'])) {
+    $first_name = test_input($_POST["first_name"]);
+    $last_name = test_input($_POST["last_name"]);
+    $email = test_input($_POST["email"]);
+    $phone = test_input($_POST["phone"]);
 
+
+    $firstname = test_input($_POST["first_name"]);
+    if (empty($_POST["first_name"])) {
+        $firstnameErr = "First Name is required";
+        $error=1;
+       
+      } 
+    else if (!preg_match("/^[a-zA-Z ]*$/", $firstname)) 
+    {
+       $firstnameErr = "Only letters and white space allowed"; 
+       $error=1;
+    }
+    $lastname = test_input($_POST["last_name"]);
+    if (empty($_POST["last_name"])) {
+        $lastnameErr = "Last Name is required";
+        $error=1;
+     
+      } 
+    else if (!preg_match("/^[a-zA-Z ]*$/", $lastname)) 
+    {
+        $lastnameErr = "Only letters and white space allowed"; 
+       $error=1;
+    }
+    $email = test_input($_POST["email"]);
+    if (empty($_POST["email"])) {
+        $emailErr = "Email is required";
+        $error=1;
+      }
+      else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $emailErr = "Invalid email format"; 
+        $error=1;
+      }
+      $phone = test_input($_POST["phone"]);
+    if (empty($_POST["phone"])) {
+        $phoneErr = "Phone Number is required";
+        $error=1;
+      }
+      else if (!preg_match("/^[6-9][0-9]{9}$/", $phone)) {
+        $phoneErr = "Invalid Phone Number"; 
+        $error=1;
+      
+      }
+    
+if( $error==0)
+{
+   
+    $first_name= ''; 
+    $last_name= ''; 
+    $phone= ''; 
+    $email= ''; 
+    $fname = test_input($_POST["first_name"]);
+    $lname = test_input($_POST["last_name"]);
+    $mail = test_input($_POST["email"]);
+    $ph = test_input($_POST["phone"]);
+
+
+
+ 
+// Create the Transport
+$transport = (new Swift_SmtpTransport('smtp.googlemail.com', 587, 'tls'))
+  ->setUsername('qa.nintriva@gmail.com')
+  ->setPassword('nintriva123456');
+ 
+// Create the Mailer using your created Transport
+$mailer = new Swift_Mailer($transport);
+ 
+// Create a message
+
+$body = 'First Name :'.$fname.'<br/>'.' Last Name:'.$lname.'<br/>'.'  Phone: '.$ph.'<br/>'.'  Email: '.$mail;
+ 
+$message = (new Swift_Message('Email From Codescholar'))
+  ->setFrom(['Codescholar@gmail.com' => 'Codescholar'])
+  ->setTo(['qa.nintriva@gmail.com'])
+  ->setBody($body)
+  ->setContentType('text/html')
+;
+ 
+// Send the message
+$mailer->send($message);
+if($message){
+$success="Thank you! Your Details has been sent successfully";
+
+}
+}
+}
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
 ?>
-
     <!--################### Header-->
     <header>
         <div class="row">
@@ -39,18 +136,18 @@ $error=0;
                                           <span class="icon-bar"></span>
                                           <span class="icon-bar"></span>                        
                                         </button>
-                                <a class="navbar-brand" href="index.html"><img src="img/Code-Scholar_logo.png"></a>
+                                <a class="navbar-brand" href="#"><img src="img/Code-Scholar_logo.png"></a>
                             </div>
                             <div class="collapse navbar-collapse" id="myNavbar">
                                 <ul id="nav-menu" class="nav navbar-nav navbar-right">
-                                    <li><a class="mnu" href="index.html">Home</a></li>
+                                    <li><a class="mnu" href="index.php">Home</a></li>
                                     <li><a class="mnu" href="about.html">About</a></li>
                                     <li class="mnu dropdown">
                                         <a class="mnu dropdown-toggle" data-toggle="dropdown" href="#">Courses
                                     <span class="caret"></span></a>
                                         <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                                             <li class="dropdown-submenu" data-toggle="dropdown-submenu">
-                                                <a class="test" tabindex="-1" href="#">Coding Bootcamps</a>
+                                                <a tabindex="-1" href="#">Coding Bootcamps</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="blended.html">Onsite Bootcamp</a></li>
                                                     <li><a href="blended.html">Blended Bootcamp</a></li>
@@ -108,41 +205,41 @@ $error=0;
                                           <h4>Cochin- 682030<br>Kerala, India<br> Ph:9995875073<br>Ph:7736407223</h3>
                                        </div>
                                        <div class="contact-form col-lg-12">
-                                       <form name="testForm" id="testForm"  method="POST"  >
+                                       <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                                        
 
-                                          <input type="text" id="nam" name="first_name" value="<?php echo isset($_POST["first_name"]) ? $_POST["first_name"] : '';?>"  placeholder="First Name">
+                                          <input type="text" id="nam" name="first_name" value="<?php echo $first_name; ?>"  placeholder="First Name">
                                           
                                          
-                                          <input type="text" id="last" name="last_name" value="<?php echo isset($_POST["last_name"]) ? $_POST["last_name"] : '';?>"  placeholder="Last Name">
+                                          <input type="text" id="last" name="last_name" value="<?php echo $last_name; ?>"  placeholder="Last Name">
                                           <br>
                                           <div class="col-md-12">
                                             <div class="col-md-4">
-                                                <span id="namespan" class="error"> <?php echo $firstnameErr;?></span>
+                                                <span class="error"> <?php echo $firstnameErr;?></span>
                                             </div>
                                             <div class="col-md-4">
-                                                <span id="lastnamespan"class="error"> <?php echo $lastnameErr;?></span>
+                                                <span class="error"> <?php echo $lastnameErr;?></span>
                                             </div>
                                           </div>
                                            
                                            <br>
-                                          <input type="number" id="phone" name="phone" value="<?php echo isset($_POST["phone"]) ? $_POST["phone"] : '';?>"  placeholder="Phone">
+                                          <input type="number" name="phone" value="<?php echo $phone; ?>"  placeholder="Phone">
                                          
-                                          <input type="email" id="email" name="email" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : '';?>" placeholder="Email">
+                                          <input type="email" name="email" value="<?php echo $email; ?>" placeholder="Email">
                                     
                                           <br>
                                          <div class="col-md-12">
                                             <div class="col-md-4">
-                                                <span id="phonespan" class="error"> <?php echo $phoneErr;?></span>
+                                                <span class="error"> <?php echo $phoneErr;?></span>
                                             </div>
                                             <div class="col-md-4">
-                                                <span id="emailspan" class="error"> <?php echo $emailErr;?></span>
+                                                <span class="error"> <?php echo $emailErr;?></span>
                                             </div>
                                           </div>
                                           <br><br>
                                           <!-- <button type="submit" class="black-btn">SEND</button> -->
                                           <button type="submit" class="black-btn" name="submit" value="SEND">SEND</button>
-                                          <span id="success" class="sucs"> <?php echo $success;?></span>
+                                          <span class="sucs"> <?php echo $success;?></span>
                                         </form>
                                        </div>
                                     </div>
@@ -171,6 +268,7 @@ $error=0;
                         <div class="col-lg-4 col-md-4 text-center">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
                             <p class="copyright">(c) copyright owned and reserverd by CodeScholar 2018.</p>
                         </div>
                         <div id="newsletter" class="col-lg-4 col-md-4 text-right">
@@ -206,107 +304,6 @@ $error=0;
    
 }
     </script>
-
-    <?php
-
-require_once 'vendor/autoload.php';
-if(isset($_POST['submit'])) {
-  
-    echo "
-    <script>
-   
-        var first_name= document.getElementById('nam').value; 
-        var last_name = document.getElementById('last').value; 
-        var email = document.getElementById('email').value; 
-        var phone = document.getElementById('phone').value; 
-        var error=0;
-        var letters = /^[A-Za-z]+$/;
-        var phoneno = /^\d{10}$/;
-       if(first_name==''){
-        document.getElementById('namespan').textContent='First Name is Required';
-        error=1;
-
-       }
-    
-       else if (!letters.test(first_name)) {
-        
-        document.getElementById('namespan').textContent='Only letters and white space allowed';
-        error=1;
-
-       }
-       if(last_name==''){
-        document.getElementById('lastnamespan').textContent='Last Name is Required';
-        error=1;
-
-       }
-    
-       else if (!letters.test(last_name)) {
-        
-        document.getElementById('lastnamespan').textContent='Only letters and white space allowed';
-        error=1;
-
-       }
-       if(email=='')
-       {
-        document.getElementById('emailspan').textContent='Email is Required';
-        error=1;
-
-       }
-       else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
-       {
-        document.getElementById('emailspan').textContent='Invalid Email';
-        error=1;
-       }
-      
-       if(phone=='')
-       {
-        document.getElementById('phonespan').textContent='Phone Number is Required';
-        error=1;
-
-       }
-     else if(!phone.match(phoneno))
-     {
-        document.getElementById('phonespan').textContent='Invalid Phone Number';
-        error=1;
-
-     }
-     if(error==0)
-     {
-         
-         </script>
-";
-$transport = (new Swift_SmtpTransport('smtp.googlemail.com', 587, 'tls'))
-  ->setUsername('qa.nintriva@gmail.com')
-  ->setPassword('nintriva123456');
- 
-// Create the Mailer using your created Transport
-$mailer = new Swift_Mailer($transport);
- 
-// Create a message
-$first_name=$_POST['first_name'];
-$last_name=$_POST['last_name'];
-$email=$_POST['email'];
-$phone=$_POST['phone'];
-$body = 'First Name :'.$first_name.' Last Name :'.$last_name.'  Phone: '.$phone.'  Email: '.$email;
- 
- 
- $message = (new Swift_Message('Email From Codescholar'))
-  ->setFrom(['Codescholar@gmail.com' => 'Codescholar'])
-  ->setTo(['qa.nintriva@gmail.com'])
-  ->setBody($body)
-  ->setContentType('text/html')
-;
- 
-// Send the message
-$mailer->send($message);
-if($message){
-    echo "
-    <script>
-    document.getElementById('success').textContent='Thank you! Your Details has been sent successfully ';
-    </script>
-";
-}
-}?>
 </body>
 
 </html>
