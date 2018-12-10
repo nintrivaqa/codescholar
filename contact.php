@@ -207,8 +207,6 @@ function test_input($data) {
                                             Kadavil Building,Kunnumpuram,<br>
                                             Old Civil Station Road,Kakkanad
                                           </h4>
-                                       </div>
-                                       <div class="about-right col-md-12 col-lg-6">
                                           <h4>Cochin- 682030<br>Kerala, India<br> Ph:9995875073<br>Ph:7736407223</h3>
                                        </div>
                                        <div class="contact-form col-lg-12">
