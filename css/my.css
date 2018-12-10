@@ -1032,6 +1032,9 @@ footer .container {
         left: 50%;
         transform: translate( -50%);
     }
+    .about-left{
+        padding-top:15%;
+    }
 }
 
 @media(min-width:1500px) {
