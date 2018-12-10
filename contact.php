@@ -203,11 +203,11 @@ function test_input($data) {
                                           <h3><i class="fa fa-map-marker"></i>
                                           location
                                           </h3>
-                                          <h5>Nintriva,
+                                          <h4>Nintriva,
                                             Kadavil Building,Kunnumpuram,<br>
                                             Old Civil Station Road,Kakkanad
-                                          </h5>
-                                          <h5>Cochin- 682030<br>Kerala, India<br> Ph:9995875073<br>Ph:7736407223</h5>
+                                          </h4>
+                                          <h4>Cochin- 682030<br>Kerala, India<br> Ph:9995875073<br>Ph:7736407223</h4>
                                        </div>
                                        <div class="contact-form col-lg-12">
                                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
