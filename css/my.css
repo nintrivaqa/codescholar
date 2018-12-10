@@ -806,13 +806,13 @@ footer .container {
     padding: 0;
  }
  .contact .left{
-    height:550px;
+    height:600px;
     background-color:#000;
     padding-right: 0;
     
  }
  .contact .right{
-    height:550px;
+    height:600px;
    
  }
  .contact .right h1{
@@ -1048,10 +1048,10 @@ footer .container {
 }
 @media(max-width:1440px){
     .contact .right{
-        height: 650px;
+        height: 730px;
     }
     .contact .left{
-        height:650px;
+        height:730px;
     }
     .about-right h4{
         margin-top:0px;
@@ -1103,7 +1103,7 @@ footer .container {
         width: 20%;
     }
     .contact .right{
-        height: 500px;
+        height: 680px;
     }
 }
 
@@ -1316,7 +1316,7 @@ footer .container {
         font-size: 20px;
     }
     .contact .right{
-        height:540px;
+        height:650px;
     }
 }
 

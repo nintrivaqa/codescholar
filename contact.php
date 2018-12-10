@@ -15,6 +15,14 @@
     <style>
 .error {color: #FF0000;}
 .sucs {color:#008000}
+form .col-lg-6{
+    padding:0;
+}
+@media (max-width:1390px) and (min-width:1200px){
+    form .col-lg-6{
+        width:51%;
+    }
+}
 </style>
 </head>
 
@@ -33,42 +41,42 @@ if(isset($_POST['submit'])) {
 
     $firstname = test_input($_POST["first_name"]);
     if (empty($_POST["first_name"])) {
-        $firstnameErr = "First Name is required";
+        $firstnameErr = "Fill";
         $error=1;
        
       } 
     else if (!preg_match("/^[a-zA-Z ]*$/", $firstname)) 
     {
-       $firstnameErr = "Only letters and white space allowed"; 
+       $firstnameErr = "invalid"; 
        $error=1;
     }
     $lastname = test_input($_POST["last_name"]);
     if (empty($_POST["last_name"])) {
-        $lastnameErr = "Last Name is required";
+        $lastnameErr = "Fill";
         $error=1;
      
       } 
     else if (!preg_match("/^[a-zA-Z ]*$/", $lastname)) 
     {
-        $lastnameErr = "Only letters and white space allowed"; 
+       $lastnameErr = "invalid"; 
        $error=1;
     }
     $email = test_input($_POST["email"]);
     if (empty($_POST["email"])) {
-        $emailErr = "Email is required";
+        $emailErr = "Fill";
         $error=1;
       }
       else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $emailErr = "Invalid email format"; 
+        $emailErr = "invalid"; 
         $error=1;
       }
       $phone = test_input($_POST["phone"]);
     if (empty($_POST["phone"])) {
-        $phoneErr = "Phone Number is required";
+        $phoneErr = "Fill";
         $error=1;
       }
       else if (!preg_match("/^[6-9][0-9]{9}$/", $phone)) {
-        $phoneErr = "Invalid Phone Number"; 
+        $phoneErr = "invalid"; 
         $error=1;
       
       }
@@ -191,7 +199,6 @@ function test_input($data) {
                                        <h1>Contact Us</h1>
                                        <hr>
                                        <br>
-                                       
                                        <div class="about-left col-md-12 col-lg-6">
                                           <h3><i class="fa fa-map-marker"></i>
                                           location
@@ -206,40 +213,28 @@ function test_input($data) {
                                        </div>
                                        <div class="contact-form col-lg-12">
                                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                                       
-
-                                          <input type="text" id="nam" name="first_name" value="<?php echo $first_name; ?>"  placeholder="First Name">
-                                          
-                                         
-                                          <input type="text" id="last" name="last_name" value="<?php echo $last_name; ?>"  placeholder="Last Name">
-                                          <br>
-                                          <div class="col-md-12">
-                                            <div class="col-md-4">
-                                                <span class="error"> <?php echo $firstnameErr;?></span>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <span class="error"> <?php echo $lastnameErr;?></span>
-                                            </div>
+                                          <div class="col-lg-6">
+                                            <input type="text" id="nam" name="first_name" value="<?php echo $first_name; ?>"  placeholder="First Name"><br>
+                                            <span class="error"><?php echo $firstnameErr;?></span> 
+                                          </div>  
+                                          <div class="col-lg-6">
+                                            <input type="text" id="last" name="last_name" value="<?php echo $last_name; ?>"  placeholder="Last Name"><br>
+                                            <span class="error"> <?php echo $lastnameErr;?></span>
                                           </div>
-                                           
-                                           <br>
-                                          <input type="number" name="phone" value="<?php echo $phone; ?>"  placeholder="Phone">
-                                         
-                                          <input type="email" name="email" value="<?php echo $email; ?>" placeholder="Email">
-                                    
-                                          <br>
-                                         <div class="col-md-12">
-                                            <div class="col-md-4">
-                                                <span class="error"> <?php echo $phoneErr;?></span>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <span class="error"> <?php echo $emailErr;?></span>
-                                            </div>
+                                          <div class="col-lg-6">
+                                            <input type="number" name="phone" value="<?php echo $phone; ?>"  placeholder="Phone"><br>
+                                            <span class="error"> <?php echo $phoneErr;?></span>
                                           </div>
-                                          <br><br>
+                                          <div class="col-lg-6">
+                                            <input type="email" name="email" value="<?php echo $email; ?>" placeholder="Email"><br>
+                                            <span class="error"> <?php echo $emailErr;?></span>
+                                          </div>
+                                          <br>
                                           <!-- <button type="submit" class="black-btn">SEND</button> -->
-                                          <button type="submit" class="black-btn" name="submit" value="SEND">SEND</button>
-                                          <span class="sucs"> <?php echo $success;?></span>
+                                          <div class="col-lg-6">
+                                            <button type="submit" class="black-btn" name="submit" value="SEND">SEND</button><br>
+                                            <span class="sucs"> <?php echo $success;?></span>
+                                          </div>
                                         </form>
                                        </div>
                                     </div>
@@ -268,7 +263,6 @@ function test_input($data) {
                         <div class="col-lg-4 col-md-4 text-center">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
                             <p class="copyright">(c) copyright owned and reserverd by CodeScholar 2018.</p>
                         </div>
                         <div id="newsletter" class="col-lg-4 col-md-4 text-right">

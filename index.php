@@ -336,37 +336,27 @@
                         
                     
                     <label>First Name</label><br>
+                    <span id="namespan" class="error"> <?php echo $nameerr;?></span>
                     <input id="first_name" type="text">
                  </div>
                  <div class="col-lg-6">
                     <label>Last Name</label><br>
+                    <span id="lastspan" class="error"> <?php echo $lasterr;?></span>
                     <input id="last_name" type="text">
-                 </div>
-                 
-                 <div class="col-lg-6">
-                 <span id="namespan" class="error"> <?php echo $nameerr;?></span>
                  </div> 
-                 <div class="col-lg-6">
-                 <span id="lastspan" class="error"> <?php echo $lasterr;?></span>
-                 </div> 
-                     
                  <div class="col-lg-6">
                     <label>Email</label><br>
+                    <span id="emailspan" class="error"> <?php echo $emailerr;?></span>
                     <input id="email" type="email">
                  </div>
                  <div class="col-lg-6">
                     <label>Phone</label><br>
+                    <span id="phonespan" class="error"> <?php echo $phoneerr;?></span>
                     <input id="phone" type="text">
-                 </div>
-                 
-                 <div class="col-lg-6">
-                 <span id="emailspan" class="error"> <?php echo $emailerr;?></span>
-                 </div> 
-                 <div class="col-lg-6">
-                 <span id="phonespan" class="error"> <?php echo $phoneerr;?></span>
                  </div> 
                  <div class="col-lg-6">
                   <label>Education Qualification</label><br>
+                  <span id="qualificationspan" class="error"> <?php echo $qualierr;?></span>
                   <div class="dropdown">
                     <select class="drop-btn" name='year_admission' id='qualification'>
                     <option value='' selected disabled>Choose here</option>
@@ -382,6 +372,7 @@
                </div>
                <div class="col-lg-6">
                   <label>Branch</label><br>
+                  <span id="branchspan" class="error"> <?php echo $brancherr;?></span>
                   <div class="dropdown">
                     <select class="drop-btn" name='year_admission' id='branch'>
                         <option value='' selected disabled>Choose here</option>
@@ -397,13 +388,8 @@
                   </div>
                </div>
                <div class="col-lg-6">
-                 <span id="qualificationspan" class="error"> <?php echo $qualierr;?></span>
-                 </div> 
-                 <div class="col-lg-6">
-                 <span id="branchspan" class="error"> <?php echo $brancherr;?></span>
-                 </div> 
-               <div class="col-lg-6">
                   <label>Year of Passing(YOP)</label><br>
+                  <span id="year_admissionspan" class="error"> <?php echo $yearerr;?></span>
                   <div class="dropdown">
                     
                    
@@ -423,6 +409,7 @@
                </div>
                <div class="col-lg-6">
                   <label>Previous Experience</label><br>
+                  <span id="experiencespan" class="error"> <?php echo $exerr;?></span>
                   <div class="dropdown">
                     <select class="drop-btn" name='year_admission' id='experience'>
                     <option value='' selected disabled>Choose here</option>
@@ -442,14 +429,7 @@
                         </select>
                   </div>
                   </div>
-                  <div class="col-lg-6">
-                 <span id="year_admissionspan" class="error"> <?php echo $yearerr;?></span>
-                 </div> 
-                 <div class="col-lg-6">
-                 <span id="experiencespan" class="error"> <?php echo $exerr;?></span>
-                 </div> 
-                  <div class="col-lg-3">
-                  </div>
+
                   <div class="col-lg-4">
                   <button class="submit-form-btn" type="submit" id="submit" name="submit" class="submit-form">Submit</button>
                   <span id='sucspan' class="sucs"><?php echo $success;?></span>
