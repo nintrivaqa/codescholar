@@ -18,6 +18,9 @@
 form .col-lg-6{
     padding:0;
 }
+.about-left{
+    padding-top:15%;
+}
 @media (min-width: 1590px){
 form .col-lg-6 {
     width: 40%;
