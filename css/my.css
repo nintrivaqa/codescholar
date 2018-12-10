@@ -809,6 +809,8 @@ footer .container {
     height:600px;
     background-color:#000;
     padding-right: 0;
+    background-image: url('../img/map.png');
+    background-position: center;
     
  }
  .contact .right{

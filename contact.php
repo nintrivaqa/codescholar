@@ -117,9 +117,11 @@ $firstnameErr=$lastnameErr=$emailErr=$phoneErr=$success="";
             <section>
                     <div class="container-fluid" style="padding:0;">
                             <div class="contact col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <div class="left col-xs-12 col-sm-12 col-md-12 col-lg-7" style="padding:0;">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.007357454266!2d76.33677831563364!3d10.01625027550048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7ef1da6a76725%3A0x773fb08ba4199b82!2sNintriva!5e0!3m2!1sen!2sin!4v1542944098529" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                    </div>
+                                    <a href="https://www.google.co.in/maps/place/Nintriva/@10.0159598,76.3377793,17.25z/data=!4m5!3m4!1s0x3ba7ef1da6a76725:0x773fb08ba4199b82!8m2!3d10.016245!4d76.338967">
+                                        <div class="left col-xs-12 col-sm-12 col-md-12 col-lg-7" style="padding:0;">
+                                        
+                                        </div>
+                                    </a>
                                     <div class="right col-xs-12 col-sm-12 col-md-12 col-lg-5">
            
                                        <br>
