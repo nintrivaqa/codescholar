@@ -41,42 +41,42 @@ if(isset($_POST['submit'])) {
 
     $firstname = test_input($_POST["first_name"]);
     if (empty($_POST["first_name"])) {
-        $firstnameErr = "Fill";
+        $firstnameErr = "Required";
         $error=1;
        
       } 
     else if (!preg_match("/^[a-zA-Z ]*$/", $firstname)) 
     {
-       $firstnameErr = "invalid"; 
+       $firstnameErr = "Invalid"; 
        $error=1;
     }
     $lastname = test_input($_POST["last_name"]);
     if (empty($_POST["last_name"])) {
-        $lastnameErr = "Fill";
+        $lastnameErr = "Required";
         $error=1;
      
       } 
     else if (!preg_match("/^[a-zA-Z ]*$/", $lastname)) 
     {
-       $lastnameErr = "invalid"; 
+       $lastnameErr = "Invalid"; 
        $error=1;
     }
     $email = test_input($_POST["email"]);
     if (empty($_POST["email"])) {
-        $emailErr = "Fill";
+        $emailErr = "Required";
         $error=1;
       }
       else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $emailErr = "invalid"; 
+        $emailErr = "Invalid"; 
         $error=1;
       }
       $phone = test_input($_POST["phone"]);
     if (empty($_POST["phone"])) {
-        $phoneErr = "Fill";
+        $phoneErr = "Required";
         $error=1;
       }
       else if (!preg_match("/^[6-9][0-9]{9}$/", $phone)) {
-        $phoneErr = "invalid"; 
+        $phoneErr = "Invalid"; 
         $error=1;
       
       }
