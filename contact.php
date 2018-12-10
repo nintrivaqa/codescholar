@@ -268,7 +268,7 @@ function test_input($data) {
                         <div id="newsletter" class="col-lg-4 col-md-4 text-right">
                             <h5>CONTACT US</h5>
                             <div class="form-group">
-                                <p class="nomargn">Codescholar@gmail.com</p>
+                                <p class="nomargn">hello@codescholar.in</p>
                                 <p class="nomargn">+91 9995875073</p>
                                 <p class="nomargn">+91 7736407223</p>
                             </div>
