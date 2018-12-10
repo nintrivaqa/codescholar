@@ -132,23 +132,29 @@ $firstnameErr=$lastnameErr=$emailErr=$phoneErr=$success="";
                                        </div>
                                        <div class="contact-form col-lg-12">
                                    
-                                          <div class="col-lg-6">
-                                            <input type="text" id="first_name" name="first_name"   placeholder="First Name"><br>
-                                            <span class="error" id="namespan"><?php echo $firstnameErr;?></span> 
-                                          </div>  
-                                          <div class="col-lg-6">
-                                            <input type="text" id="last_name" name="last_name"   placeholder="Last Name"><br>
-                                            <span class="error" id="lastspan"> <?php echo $lastnameErr;?></span>
+                                          <div class="col-lg-12">
+                                            <div class="col-lg-6">
+                                                <input type="text" id="first_name" name="first_name"   placeholder="First Name"><br>
+                                                <span class="error" id="namespan"><?php echo $firstnameErr;?></span> 
+                                            </div>  
+                                            <div class="col-lg-6">
+                                                <input type="text" id="last_name" name="last_name"   placeholder="Last Name"><br>
+                                                <span class="error" id="lastspan"> <?php echo $lastnameErr;?></span>
+                                            </div>
                                           </div>
-                                          <div class="col-lg-6">
-                                            <input type="number" name="phone" id="phone"   placeholder="Phone"><br>
-                                            <span class="error" id="phonespan"> <?php echo $phoneErr;?></span>
+
+                                          <div class="col-lg-12">
+                                            <div class="col-lg-6">
+                                                <input type="number" name="phone" id="phone"   placeholder="Phone"><br>
+                                                <span class="error" id="phonespan"> <?php echo $phoneErr;?></span>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <input type="email" name="email" id="email"  placeholder="Email"><br>
+                                                <span class="error" id="emailspan"> <?php echo $emailErr;?></span>
+                                            </div>
                                           </div>
-                                          <div class="col-lg-6">
-                                            <input type="email" name="email" id="email"  placeholder="Email"><br>
-                                            <span class="error" id="emailspan"> <?php echo $emailErr;?></span>
-                                          </div>
-                                          <br>
+
+                                          
                                           <!-- <button type="submit" class="black-btn">SEND</button> -->
                                           <div class="col-lg-6">
                                               <br>
