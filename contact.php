@@ -309,13 +309,12 @@ $firstnameErr=$lastnameErr=$emailErr=$phoneErr=$success="";
                     
                      if(data="Success")
                      {
-                        
+
+                      document.getElementById("load").style.visibility ="hidden";  
                       document.getElementById('first_name').value=''; 
                       document.getElementById('last_name').value=''; 
                       document.getElementById('phone').value=''; 
                       document.getElementById('email').value=''; 
-                    
-                      document.getElementById("load").style.visibility ="hidden";
                       document.getElementById('sucspan').textContent='Thank you! Your Details has been sent successfully';
                          // $('#myModal').modal('hide');
                          // alert('Thank you! Your Details has been sent successfully');
