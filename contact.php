@@ -132,7 +132,7 @@ $firstnameErr=$lastnameErr=$emailErr=$phoneErr=$success="";
                                        </div>
                                        <div class="contact-form col-lg-12">
                                    
-                                          <div class="col-lg-12">
+                                          <div class="col-lg-12" style="padding:0">
                                             <div class="col-lg-6">
                                                 <input type="text" id="first_name" name="first_name"   placeholder="First Name"><br>
                                                 <span class="error" id="namespan"><?php echo $firstnameErr;?></span> 
@@ -143,7 +143,7 @@ $firstnameErr=$lastnameErr=$emailErr=$phoneErr=$success="";
                                             </div>
                                           </div>
 
-                                          <div class="col-lg-12">
+                                          <div class="col-lg-12" style="padding:0">
                                             <div class="col-lg-6">
                                                 <input type="number" name="phone" id="phone"   placeholder="Phone"><br>
                                                 <span class="error" id="phonespan"> <?php echo $phoneErr;?></span>
