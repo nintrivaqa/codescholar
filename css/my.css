@@ -1035,6 +1035,7 @@ footer .container {
     .about-left{
         padding-top:15%;
     }
+
 }
 
 @media(min-width:1500px) {
@@ -1111,6 +1112,9 @@ footer .container {
     }
     .contact .right{
         height: 680px;
+    }
+    .about-left{
+        padding-top:5%;
     }
 }
 
