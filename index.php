@@ -116,7 +116,7 @@
                                     <div class="header-qotes">
                                         <h1>Moulding software professionals loved by the industry.</h1>
                                         <p>Cutting Edge Curriculum mapped to Industry needs designed to make you Future Ready</p>
-                                        <a href="#"><button type="button" class="rgtr" data-toggle="modal" data-target="#myModal">Explore Courses
+                                        <a href="other.html"><button type="button" class="rgtr">Explore Courses
                                         </button></a>
                                     </div>
                                 </div>
@@ -127,7 +127,7 @@
                                     <div class="header-qotes">
                                         <h1>Transform your career</h1>
                                         <p>Upgrade yourself with on-demand skills in the high growth technology industry</p>
-                                        <a href="#"><button type="button" class="rgtr" data-toggle="modal" data-target="#myModal">Explore Courses</button></a>
+                                        <a href="other.html"><button type="button" class="rgtr">Explore Courses</button></a>
                                     </div>
                                 </div>
                             </div>
