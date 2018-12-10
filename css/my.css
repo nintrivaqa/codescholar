@@ -965,6 +965,10 @@ footer .container {
  .navbar-brand{
      z-index: 999;
  }
+ .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #555;
+    background-color: #ffffff;
+}
 /* ############### @media ################  */
 
 @media(min-width:568px) {
