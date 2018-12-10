@@ -215,19 +215,19 @@ function test_input($data) {
                                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                                           <div class="col-lg-6">
                                             <input type="text" id="nam" name="first_name" value="<?php echo $first_name; ?>"  placeholder="First Name"><br>
-                                            <span class="error"><?php echo $firstnameErr;?></span> 
+                                            <span class="error" id="namespan"><?php echo $firstnameErr;?></span> 
                                           </div>  
                                           <div class="col-lg-6">
                                             <input type="text" id="last" name="last_name" value="<?php echo $last_name; ?>"  placeholder="Last Name"><br>
-                                            <span class="error"> <?php echo $lastnameErr;?></span>
+                                            <span class="error" id="lastspan"> <?php echo $lastnameErr;?></span>
                                           </div>
                                           <div class="col-lg-6">
                                             <input type="number" name="phone" value="<?php echo $phone; ?>"  placeholder="Phone"><br>
-                                            <span class="error"> <?php echo $phoneErr;?></span>
+                                            <span class="error" id="phonespan"> <?php echo $phoneErr;?></span>
                                           </div>
                                           <div class="col-lg-6">
                                             <input type="email" name="email" value="<?php echo $email; ?>" placeholder="Email"><br>
-                                            <span class="error"> <?php echo $emailErr;?></span>
+                                            <span class="error" id="emailspan"> <?php echo $emailErr;?></span>
                                           </div>
                                           <br>
                                           <!-- <button type="submit" class="black-btn">SEND</button> -->
@@ -284,6 +284,11 @@ function test_input($data) {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
     $(document).ready(function(){
+        // document.getElementById('namespan').textContent='';
+        //     document.getElementById('lastspan').textContent='';
+        //     document.getElementById('phonespan').textContent='';
+        //     document.getElementById('emailspan').textContent='';
+          
     $('.dropdown-submenu a.test').on("click", function(e){
       $(this).next('ul').toggle();
       e.stopPropagation();
