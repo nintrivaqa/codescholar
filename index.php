@@ -288,7 +288,7 @@
                             <P class="codescholarfooter">CodeScholar offers a personalised approach to technical education.</P>
                         </div>
                         <div class="col-lg-4 col-md-4 text-center">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/codescholarbootcamp/"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
                             <p class="copyright">(c) copyright owned and reserverd by CodeScholar 2018.</p>
                         </div>
