@@ -153,11 +153,9 @@ $firstnameErr=$lastnameErr=$emailErr=$phoneErr=$success="";
                                           <div class="col-lg-6">
                                             <button type="submit" class="black-btn" id="submit" value="SEND">SEND</button><br>
                                             <span class="sucs" id="sucspan"> <?php echo $success;?></span>
+                                            <button class="btn btn-lg btn-warning" id="load"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button>
                                           </div>
-                                          <div class="col-lg-4">
-                  <button class="btn btn-lg btn-warning" id="load"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button>
-                  </div>
-                                        
+                                          
                                        </div>
                                     </div>
                             </div>
