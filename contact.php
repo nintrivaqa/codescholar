@@ -151,10 +151,10 @@ $firstnameErr=$lastnameErr=$emailErr=$phoneErr=$success="";
                                           <br>
                                           <!-- <button type="submit" class="black-btn">SEND</button> -->
                                           <div class="col-lg-6">
+                                              <br>
                                             <button type="submit" class="black-btn" id="submit" value="SEND">SEND</button>&nbsp; 
                                             <button class="btn btn-lg btn-warning" id="load"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button><br>
                                             <span class="sucs" id="sucspan"> <?php echo $success;?></span>
-                                           
                                           </div>
                                           
                                        </div>
