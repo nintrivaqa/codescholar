@@ -38,106 +38,7 @@ form .col-lg-6 {
 <body>
 <?php
 $firstnameErr=$lastnameErr=$emailErr=$phoneErr=$success="";
-$first_name=$last_name=$email=$phone="";
-$error=0;
-require_once 'vendor/autoload.php';
-if(isset($_POST['submit'])) {
-    $first_name = test_input($_POST["first_name"]);
-    $last_name = test_input($_POST["last_name"]);
-    $email = test_input($_POST["email"]);
-    $phone = test_input($_POST["phone"]);
 
-
-    $firstname = test_input($_POST["first_name"]);
-    if (empty($_POST["first_name"])) {
-        $firstnameErr = "Required";
-        $error=1;
-       
-      } 
-    else if (!preg_match("/^[a-zA-Z ]*$/", $firstname)) 
-    {
-       $firstnameErr = "Invalid"; 
-       $error=1;
-    }
-    $lastname = test_input($_POST["last_name"]);
-    if (empty($_POST["last_name"])) {
-        $lastnameErr = "Required";
-        $error=1;
-     
-      } 
-    else if (!preg_match("/^[a-zA-Z ]*$/", $lastname)) 
-    {
-       $lastnameErr = "Invalid"; 
-       $error=1;
-    }
-    $email = test_input($_POST["email"]);
-    if (empty($_POST["email"])) {
-        $emailErr = "Required";
-        $error=1;
-      }
-      else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $emailErr = "Invalid"; 
-        $error=1;
-      }
-      $phone = test_input($_POST["phone"]);
-    if (empty($_POST["phone"])) {
-        $phoneErr = "Required";
-        $error=1;
-      }
-      else if (!preg_match("/^[6-9][0-9]{9}$/", $phone)) {
-        $phoneErr = "Invalid"; 
-        $error=1;
-      
-      }
-    
-if( $error==0)
-{
-   
-    $first_name= ''; 
-    $last_name= ''; 
-    $phone= ''; 
-    $email= ''; 
-    $fname = test_input($_POST["first_name"]);
-    $lname = test_input($_POST["last_name"]);
-    $mail = test_input($_POST["email"]);
-    $ph = test_input($_POST["phone"]);
-
-
-
- 
-// Create the Transport
-$transport = (new Swift_SmtpTransport('smtp.googlemail.com', 587, 'tls'))
-  ->setUsername('qa.nintriva@gmail.com')
-  ->setPassword('nintriva123456');
- 
-// Create the Mailer using your created Transport
-$mailer = new Swift_Mailer($transport);
- 
-// Create a message
-
-$body = 'First Name :'.$fname.'<br/>'.' Last Name:'.$lname.'<br/>'.'  Phone: '.$ph.'<br/>'.'  Email: '.$mail;
- 
-$message = (new Swift_Message('Email From Codescholar'))
-  ->setFrom(['Codescholar@gmail.com' => 'Codescholar'])
-  ->setTo(['qa.nintriva@gmail.com'])
-  ->setBody($body)
-  ->setContentType('text/html')
-;
- 
-// Send the message
-$mailer->send($message);
-if($message){
-$success="Thank you! Your Details has been sent successfully";
-
-}
-}
-}
-function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-  }
 ?>
     <!--################### Header-->
     <header>
@@ -216,30 +117,33 @@ function test_input($data) {
                                     
                                        </div>
                                        <div class="contact-form col-lg-12">
-                                       <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                                   
                                           <div class="col-lg-6">
-                                            <input type="text" id="nam" name="first_name" value="<?php echo $first_name; ?>"  placeholder="First Name"><br>
+                                            <input type="text" id="first_name" name="first_name"   placeholder="First Name"><br>
                                             <span class="error" id="namespan"><?php echo $firstnameErr;?></span> 
                                           </div>  
                                           <div class="col-lg-6">
-                                            <input type="text" id="last" name="last_name" value="<?php echo $last_name; ?>"  placeholder="Last Name"><br>
+                                            <input type="text" id="last_name" name="last_name"   placeholder="Last Name"><br>
                                             <span class="error" id="lastspan"> <?php echo $lastnameErr;?></span>
                                           </div>
                                           <div class="col-lg-6">
-                                            <input type="number" name="phone" value="<?php echo $phone; ?>"  placeholder="Phone"><br>
+                                            <input type="number" name="phone" id="phone"   placeholder="Phone"><br>
                                             <span class="error" id="phonespan"> <?php echo $phoneErr;?></span>
                                           </div>
                                           <div class="col-lg-6">
-                                            <input type="email" name="email" value="<?php echo $email; ?>" placeholder="Email"><br>
+                                            <input type="email" name="email" id="email"  placeholder="Email"><br>
                                             <span class="error" id="emailspan"> <?php echo $emailErr;?></span>
                                           </div>
                                           <br>
                                           <!-- <button type="submit" class="black-btn">SEND</button> -->
                                           <div class="col-lg-6">
-                                            <button type="submit" class="black-btn" name="submit" value="SEND">SEND</button><br>
-                                            <span class="sucs"> <?php echo $success;?></span>
+                                            <button type="submit" class="black-btn" id="submit" value="SEND">SEND</button><br>
+                                            <span class="sucs" id="sucspan"> <?php echo $success;?></span>
                                           </div>
-                                        </form>
+                                          <div class="col-lg-4">
+                  <button class="btn btn-lg btn-warning" id="load"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button>
+                  </div>
+                                        
                                        </div>
                                     </div>
                             </div>
@@ -288,16 +192,129 @@ function test_input($data) {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
     $(document).ready(function(){
+        document.getElementById("load").style.visibility = "hidden";
         // document.getElementById('namespan').textContent='';
         //     document.getElementById('lastspan').textContent='';
         //     document.getElementById('phonespan').textContent='';
         //     document.getElementById('emailspan').textContent='';
           
     $('.dropdown-submenu a.test').on("click", function(e){
+       
       $(this).next('ul').toggle();
       e.stopPropagation();
       e.preventDefault();
     });
+    $('#submit').on('click', function() {
+        
+        var first_name= document.getElementById('first_name').value; 
+        var last_name= document.getElementById('last_name').value; 
+        var phone= document.getElementById('phone').value; 
+        var email= document.getElementById('email').value; 
+       
+        var letters = /^[A-Za-z]+$/;
+        var phoneno = /^\d{10}$/;
+        var error=0;
+        var brn='';
+         if(first_name==''){
+             document.getElementById('namespan').textContent='Required';
+             error=1;
+
+         }
+ 
+         else if (!letters.test(first_name)) {
+     
+              document.getElementById('namespan').textContent='Invalid';
+             error=1;
+
+         }
+         else{
+             document.getElementById('namespan').textContent='';
+
+         }
+         if(last_name==''){
+             document.getElementById('lastspan').textContent='Required';
+             error=1;
+
+         }
+ 
+         else if (!letters.test(last_name)) {
+     
+             document.getElementById('lastspan').textContent='Invalid';
+             error=1;
+
+         }
+         else{
+             document.getElementById('lastspan').textContent='';
+         }
+         if(email=='')
+         {
+             document.getElementById('emailspan').textContent='Required';
+             error=1;
+
+         }
+         else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+         {
+             document.getElementById('emailspan').textContent='Invalid';
+             error=1;
+         }
+         else{
+             document.getElementById('emailspan').textContent='';
+
+         }
+   
+         if(phone=='')
+         {
+             document.getElementById('phonespan').textContent='Required';
+             error=1;
+
+         }
+         else if(!phone.match(phoneno))
+          {
+             document.getElementById('phonespan').textContent='Invalid';
+             error=1;
+
+         }
+         else{
+             document.getElementById('phonespan').textContent='';
+         }
+        
+         if(error==0)
+         {
+             document.getElementById("load").style.visibility =  'visible';
+            
+             $.ajax({
+                 type: 'post',
+                  url: 'mail.php',
+                  data: { 
+                     'first_name':first_name, 
+                     'last_name':last_name,
+                     'email':email,
+                     'phone':phone,
+                 
+                  },
+                  success: function( data ) {
+                    
+                     if(data="Success")
+                     {
+                        
+                      document.getElementById('first_name').value=''; 
+                      document.getElementById('last_name').value=''; 
+                      document.getElementById('phone').value=''; 
+                      document.getElementById('email').value=''; 
+                    
+                      document.getElementById("load").style.visibility ="hidden";
+                      document.getElementById('sucspan').textContent='Thank you! Your Details has been sent successfully';
+                         // $('#myModal').modal('hide');
+                         // alert('Thank you! Your Details has been sent successfully');
+                     }
+             }
+         });
+         }
+
+
+      
+     
+     });
     
   });
   function clearform()
