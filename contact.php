@@ -19,13 +19,14 @@
     padding:0;
 }
 
-@media (min-width: 1590px){
-.contact-form .col-lg-6 {
-    width: 40%;
-}}
+
 @media (min-width: 1390px){
 .contact-form .col-lg-6 {
     width: 47%;
+}}
+@media (min-width: 1590px){
+.contact-form .col-lg-6 {
+    width: 40%;
 }}
 @media (max-width:1390px) and (min-width:1200px){
     .contact-form .col-lg-6{
