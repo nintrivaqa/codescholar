@@ -20,7 +20,7 @@ form .col-lg-6{
 }
 @media (min-width: 1390px){
 form .col-lg-6 {
-    width: 45%;
+    width: 47%;
 }}
 @media (max-width:1390px) and (min-width:1200px){
     form .col-lg-6{
