@@ -829,6 +829,7 @@ footer .container {
  }
  .about-left h4{
    margin:0 0 10px 90px;
+   font-size: 15px;
  }
  .about-right{
     
@@ -859,9 +860,12 @@ footer .container {
   margin: 0; 
 }
 .black-btn{
-    padding:10px 20px;
-    background-color:#000;
-    color:#fff;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
  }
  .black-btn:hover{
      box-shadow:0 5px 10px rgba(0,0,0,0.5);
@@ -1027,6 +1031,9 @@ footer .container {
         bottom: 20%;
         left: 50%;
         transform: translate( -50%);
+    }
+    .about-left{
+        padding-top:15%;
     }
 }
 

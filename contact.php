@@ -18,6 +18,15 @@
 form .col-lg-6{
     padding:0;
 }
+
+@media (min-width: 1590px){
+form .col-lg-6 {
+    width: 40%;
+}}
+@media (min-width: 1390px){
+form .col-lg-6 {
+    width: 47%;
+}}
 @media (max-width:1390px) and (min-width:1200px){
     form .col-lg-6{
         width:51%;
@@ -41,42 +50,42 @@ if(isset($_POST['submit'])) {
 
     $firstname = test_input($_POST["first_name"]);
     if (empty($_POST["first_name"])) {
-        $firstnameErr = "Fill";
+        $firstnameErr = "Required";
         $error=1;
        
       } 
     else if (!preg_match("/^[a-zA-Z ]*$/", $firstname)) 
     {
-       $firstnameErr = "invalid"; 
+       $firstnameErr = "Invalid"; 
        $error=1;
     }
     $lastname = test_input($_POST["last_name"]);
     if (empty($_POST["last_name"])) {
-        $lastnameErr = "Fill";
+        $lastnameErr = "Required";
         $error=1;
      
       } 
     else if (!preg_match("/^[a-zA-Z ]*$/", $lastname)) 
     {
-       $lastnameErr = "invalid"; 
+       $lastnameErr = "Invalid"; 
        $error=1;
     }
     $email = test_input($_POST["email"]);
     if (empty($_POST["email"])) {
-        $emailErr = "Fill";
+        $emailErr = "Required";
         $error=1;
       }
       else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $emailErr = "invalid"; 
+        $emailErr = "Invalid"; 
         $error=1;
       }
       $phone = test_input($_POST["phone"]);
     if (empty($_POST["phone"])) {
-        $phoneErr = "Fill";
+        $phoneErr = "Required";
         $error=1;
       }
       else if (!preg_match("/^[6-9][0-9]{9}$/", $phone)) {
-        $phoneErr = "invalid"; 
+        $phoneErr = "Invalid"; 
         $error=1;
       
       }
@@ -196,20 +205,15 @@ function test_input($data) {
                                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.007357454266!2d76.33677831563364!3d10.01625027550048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7ef1da6a76725%3A0x773fb08ba4199b82!2sNintriva!5e0!3m2!1sen!2sin!4v1542944098529" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                                     </div>
                                     <div class="right col-xs-12 col-sm-12 col-md-12 col-lg-5">
-                                       <h1>Contact Us</h1>
-                                       <hr>
+           
                                        <br>
                                        <div class="about-left col-md-12 col-lg-6">
-                                          <h3><i class="fa fa-map-marker"></i>
-                                          location
-                                          </h3>
                                           <h4>Nintriva,
                                             Kadavil Building,Kunnumpuram,<br>
-                                            Old Civil Station Road,Kakkanad
+                                            Old Civil Station Road,Kakkanad<br>
+                                            Cochin- 682030<br>Kerala, India<br> Ph:9995875073<br>Ph:7736407223
                                           </h4>
-                                       </div>
-                                       <div class="about-right col-md-12 col-lg-6">
-                                          <h4>Cochin- 682030<br>Kerala, India<br> Ph:9995875073<br>Ph:7736407223</h3>
+                                    
                                        </div>
                                        <div class="contact-form col-lg-12">
                                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
@@ -268,7 +272,7 @@ function test_input($data) {
                         <div id="newsletter" class="col-lg-4 col-md-4 text-right">
                             <h5>CONTACT US</h5>
                             <div class="form-group">
-                                <p class="nomargn">Codescholar@gmail.com</p>
+                                <p class="nomargn">hello@codescholar.in</p>
                                 <p class="nomargn">+91 9995875073</p>
                                 <p class="nomargn">+91 7736407223</p>
                             </div>
