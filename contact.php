@@ -18,7 +18,7 @@
 form .col-lg-6{
     padding:0;
 }
-@media (min-width: 1200px){
+@media (min-width: 1390px){
 form .col-lg-6 {
     width: 45%;
 }}
