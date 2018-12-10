@@ -1058,10 +1058,10 @@ footer .container {
 }
 @media(max-width:1440px){
     .contact .right{
-        height: 730px;
+        height: 580px;
     }
     .contact .left{
-        height:730px;
+        height:580px;
     }
     .about-right h4{
         margin-top:0px;
@@ -1117,6 +1117,10 @@ footer .container {
     }
     .about-left{
         padding-top:5%;
+    }
+    .contact .left{
+        height: 500px;
+    }
 
 }
 
