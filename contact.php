@@ -19,13 +19,14 @@
     padding:0;
 }
 
-@media (min-width: 1590px){
-.contact-form .col-lg-6 {
-    width: 40%;
-}}
+
 @media (min-width: 1390px){
 .contact-form .col-lg-6 {
     width: 47%;
+}}
+@media (min-width: 1590px){
+.contact-form .col-lg-6 {
+    width: 40%;
 }}
 @media (max-width:1390px) and (min-width:1200px){
     .contact-form .col-lg-6{
@@ -116,9 +117,11 @@ $firstnameErr=$lastnameErr=$emailErr=$phoneErr=$success="";
             <section>
                     <div class="container-fluid" style="padding:0;">
                             <div class="contact col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <div class="left col-xs-12 col-sm-12 col-md-12 col-lg-7" style="padding:0;">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.007357454266!2d76.33677831563364!3d10.01625027550048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7ef1da6a76725%3A0x773fb08ba4199b82!2sNintriva!5e0!3m2!1sen!2sin!4v1542944098529" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                    </div>
+                                    <a href="https://www.google.co.in/maps/place/Nintriva/@10.0159598,76.3377793,17.25z/data=!4m5!3m4!1s0x3ba7ef1da6a76725:0x773fb08ba4199b82!8m2!3d10.016245!4d76.338967">
+                                        <div class="left col-xs-12 col-sm-12 col-md-12 col-lg-7" style="padding:0;">
+                                        
+                                        </div>
+                                    </a>
                                     <div class="right col-xs-12 col-sm-12 col-md-12 col-lg-5">
            
                                        <br>
@@ -132,29 +135,35 @@ $firstnameErr=$lastnameErr=$emailErr=$phoneErr=$success="";
                                        </div>
                                        <div class="contact-form col-lg-12">
                                    
-                                          <div class="col-lg-6">
-                                            <input type="text" id="first_name" name="first_name"   placeholder="First Name"><br>
-                                            <span class="error" id="namespan"><?php echo $firstnameErr;?></span> 
-                                          </div>  
-                                          <div class="col-lg-6">
-                                            <input type="text" id="last_name" name="last_name"   placeholder="Last Name"><br>
-                                            <span class="error" id="lastspan"> <?php echo $lastnameErr;?></span>
+                                          <div class="col-lg-12" style="padding:0">
+                                            <div class="col-lg-6">
+                                                <input type="text" id="first_name" name="first_name"   placeholder="First Name"><br>
+                                                <span class="error" id="namespan"><?php echo $firstnameErr;?></span> 
+                                            </div>  
+                                            <div class="col-lg-6">
+                                                <input type="text" id="last_name" name="last_name"   placeholder="Last Name"><br>
+                                                <span class="error" id="lastspan"> <?php echo $lastnameErr;?></span>
+                                            </div>
                                           </div>
-                                          <div class="col-lg-6">
-                                            <input type="number" name="phone" id="phone"   placeholder="Phone"><br>
-                                            <span class="error" id="phonespan"> <?php echo $phoneErr;?></span>
+
+                                          <div class="col-lg-12" style="padding:0">
+                                            <div class="col-lg-6">
+                                                <input type="number" name="phone" id="phone"   placeholder="Phone"><br>
+                                                <span class="error" id="phonespan"> <?php echo $phoneErr;?></span>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <input type="email" name="email" id="email"  placeholder="Email"><br>
+                                                <span class="error" id="emailspan"> <?php echo $emailErr;?></span>
+                                            </div>
                                           </div>
-                                          <div class="col-lg-6">
-                                            <input type="email" name="email" id="email"  placeholder="Email"><br>
-                                            <span class="error" id="emailspan"> <?php echo $emailErr;?></span>
-                                          </div>
-                                          <br>
+
+                                          
                                           <!-- <button type="submit" class="black-btn">SEND</button> -->
                                           <div class="col-lg-6">
+                                              <br>
                                             <button type="submit" class="black-btn" id="submit" value="SEND">SEND</button>&nbsp; 
                                             <button class="btn btn-lg btn-warning" id="load"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button><br>
                                             <span class="sucs" id="sucspan"> <?php echo $success;?></span>
-                                           
                                           </div>
                                           
                                        </div>
@@ -182,7 +191,7 @@ $firstnameErr=$lastnameErr=$emailErr=$phoneErr=$success="";
                             <P class="codescholarfooter">CodeScholar offers a personalised approach to technical education.</P>
                         </div>
                         <div class="col-lg-4 col-md-4 text-center">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/codescholarbootcamp/"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
                             <p class="copyright">(c) copyright owned and reserverd by CodeScholar 2018.</p>
                         </div>

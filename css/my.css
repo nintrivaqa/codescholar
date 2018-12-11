@@ -809,6 +809,8 @@ footer .container {
     height:600px;
     background-color:#000;
     padding-right: 0;
+    background-image: url('../img/map.png');
+    background-position: center;
     
  }
  .contact .right{
@@ -963,6 +965,10 @@ footer .container {
  .navbar-brand{
      z-index: 999;
  }
+ .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #555;
+    background-color: #ffffff;
+}
 /* ############### @media ################  */
 
 @media(min-width:568px) {
@@ -1056,10 +1062,10 @@ footer .container {
 }
 @media(max-width:1440px){
     .contact .right{
-        height: 730px;
+        height: 580px;
     }
     .contact .left{
-        height:730px;
+        height:580px;
     }
     .about-right h4{
         margin-top:0px;
@@ -1115,6 +1121,10 @@ footer .container {
     }
     .about-left{
         padding-top:5%;
+    }
+    .contact .left{
+        height: 500px;
+    }
 
 }
 
@@ -1327,7 +1337,7 @@ footer .container {
         font-size: 20px;
     }
     .contact .right{
-        height:460px;
+        height: 510px;
     }
 }
 
