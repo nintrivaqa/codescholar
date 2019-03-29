@@ -2,6 +2,7 @@ body {
     background: #fff;
     background-size: 100% 100%;
     font-family: "Lato", sans-serif;
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -214,7 +215,7 @@ body {
 h1,
 h2,
 h3,
-h4,
+h4
 {
     display: inline-block;
     text-align: justify;
